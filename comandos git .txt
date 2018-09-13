@@ -1,0 +1,27 @@
+$ git init
+
+$ git remote add origin https://github.com/GilliardMilliorini/CursoTranspoBrasil.git  ( local onde arquivo esta alocado )
+
+$ git fetch origin master
+
+$ git pull origin master
+
+$ git status
+
+$ git add .
+
+$ git status
+
+$ git add .
+
+$ git commit -m "Adicionando os primeiros projetos"
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+$ git push origin master
+
+$ git commit -m
+
+$ git push origin master
+

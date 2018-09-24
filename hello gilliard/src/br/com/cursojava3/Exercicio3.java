@@ -8,6 +8,7 @@ public class Exercicio3 {
 		Scanner teclado = new Scanner(System.in);
 		System.out.println("informe sua Idade");
 		int idade = Integer.parseInt(teclado.next());
+		// pode criar variavel idademais20 e atribuid o valor de idade + 20 e no sysout so selecionar a variavel idademais20
 		System.out.printf(idade + 20 +" Anos, está sera sua idade daqui a 20 anos:");
 		
 		

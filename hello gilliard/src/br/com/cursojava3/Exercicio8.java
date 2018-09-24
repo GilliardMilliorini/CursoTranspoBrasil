@@ -6,9 +6,13 @@ public class Exercicio8 {
 	public static void main(String[] args) {
 		Scanner teclado = new Scanner(System.in);
 		System.out.println("Digite a altura");
-		double numero1 = Double.parseDouble(teclado.nextLine());
+		double altura = Double.parseDouble(teclado.nextLine());
 		System.out.println("Digite a base");
-		double numero2 = Double.parseDouble(teclado.nextLine());
+		double base = Double.parseDouble(teclado.nextLine());
+		double area = base * altura / 2;
+		System.out.printf("A áre do triangulo é %.2f\n", area);
+		
+		teclado.close();
 		
 	}
 

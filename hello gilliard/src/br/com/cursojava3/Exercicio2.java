@@ -14,7 +14,8 @@ public class Exercicio2 {
 		System.out.println("informe o terceiro número");
 		double numero3 = Double.parseDouble(teclado.nextLine());
 		System.out.println("a média todal é");
-		System.out.printf("(%.2f + %.2f + %.2f) /3 = %f\n",numero1,numero2,numero3, (numero1 + numero2 + numero3) /3);
+		// Pode ser criado outra variavel double com o comando media = (numero 1 2 e 3 ) /3 e no sysout inserir somente a variavel média.
+		System.out.printf("(%.2f + %.2f + %.2f) /3 = %.2f\n",numero1,numero2,numero3, (numero1 + numero2 + numero3) /3);
 				
 		
 	teclado.close();

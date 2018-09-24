@@ -7,6 +7,7 @@ public class Exercicio4 {
 		Scanner teclado = new Scanner(System.in);
 		System.out.println("informe sua Idade");
 		int idade = Integer.parseInt(teclado.next());
+		// pode criar variavel idadeEmMeses e atribuir o valor de idade / 12 meses.No sysout so selecionar a variavel idadeEmMeses
 		System.out.printf(idade *12 +" meses de idade:");
 		
 		

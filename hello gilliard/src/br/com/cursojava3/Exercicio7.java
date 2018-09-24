@@ -5,12 +5,13 @@ import java.util.Scanner;
 public class Exercicio7 {
 	public static void main(String[] args) {
 		Scanner teclado = new Scanner(System.in);
-		System.out.println("Digite um número");
+		System.out.println("Informe a primeira nota");
 		double numero1 = Double.parseDouble(teclado.nextLine());
-		System.out.println("Digite outro número");
+		System.out.println("Informe a segunda nota");
 		double numero2 = Double.parseDouble(teclado.nextLine());
-		System.out.println("Digite outro número");
+		System.out.println("Informe a terceira nota");
 		double numero3 = Double.parseDouble(teclado.nextLine());
+		//poderia criar uma variavel "media" e atribuir o valor da (nota 1 2 e 3) / 3.0
 		System.out.println("Sua média é: ");
 		System.out.printf("(%.2f + %.2f + %.2f)/3 = %f\n", numero1, numero2, numero3, (numero1 + numero2 + numero3)/3);
 		System.out.println("Sua maior nota é:");

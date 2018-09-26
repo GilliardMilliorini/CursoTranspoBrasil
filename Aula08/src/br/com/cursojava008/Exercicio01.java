@@ -3,27 +3,22 @@ package br.com.cursojava008;
 import java.util.Scanner;
 
 public class Exercicio01 {
-	public static void main(String[] args) {
-		
-	Scanner teclado = new Scanner(System.in);
-		double[] notas = new double [10];
+
+	public static void exercicio01(Scanner teclado){
+		double[] notas = new double[3];
 		double media = 0;
-		
-		for( int index = 0; index < notas.length ; index ++){
-			System.out.println("Digite a nota");
+		for(int index = 0; index < notas.length; index++){
+			System.out.printf("Informe a %dª nota:\n",index+1);
 			notas[index] = Double.parseDouble(teclado.nextLine());
-			media+= notas[index];
+			media += notas[index];
 		}
-		media/= notas.le												 //n acabei essa caralha
-			
-			double nota = Double.parseDouble(teclado.nextLine());
-			System.out.println(nota + " ");
-		//	notas = nota;
-			
+		media /=notas.length;
+		System.out.println("As notas informadas foram:");
+		for (double nota : notas) {
+			System.out.print(nota +" ");
 		}
-	
-	
-	teclado.close();
+		System.out.println("");
+		System.out.println("O valor da média é "+media);
 	}
 }
 

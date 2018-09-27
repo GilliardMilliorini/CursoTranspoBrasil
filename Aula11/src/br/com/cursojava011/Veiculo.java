@@ -1,6 +1,6 @@
 package br.com.cursojava011;
 
-public class Veiculo {
+public class Veiculosssss {
 
 	String marca;
 	String modelo;

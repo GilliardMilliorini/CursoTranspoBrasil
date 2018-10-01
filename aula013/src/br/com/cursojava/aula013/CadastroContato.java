@@ -69,7 +69,7 @@ public class CadastroContato {
 		ArrayList<Contato> lista = controller.buscarTodos();
 		System.out.println("======== LISTA DE CONTATOS =============");
 		for (Contato contato : lista) {
-			System.out.printf("%d - %s - %s - %s \n",contato.getId(),contato.getNome(),contato.getEmail(),contato.getTelefone());
+			System.out.printf("%d - %s - %s - %s - %s \n",contato.getId(),contato.getNome(),contato.getEmail(),contato.getTelefone(), contato.getCodigo());
 		}
 		
 	}
@@ -86,8 +86,9 @@ public class CadastroContato {
 		String email = teclado.nextLine();
 		System.out.println("Telefone:");
 		String telefone = teclado.nextLine();
-		
-		boolean ok = controller.adicionarContato(nome,email,telefone);
+		System.out.println("Codigo");
+		String  codigo = teclado.nextLine();
+		boolean ok = controller.adicionarContato(nome,email,telefone, codigo);
 		if(ok){
 			System.out.println("Contato adicionado com sucesso");
 		}else{

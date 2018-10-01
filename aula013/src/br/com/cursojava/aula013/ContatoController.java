@@ -1,17 +1,14 @@
 package br.com.cursojava.aula013;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+
 
 public class ContatoController {
 
 	private ContatoRepositorio repositorio = new ContatoRepositorio();
 
-	public boolean adicionarContato(String nome, String email, String telefone) {
-		Contato contato = new Contato();
-		contato.setNome(nome);
-		contato.setEmail(email);
-		contato.setTelefone(telefone);
+	public boolean adicionarContato( String nome, String email, String telefone, String codigo) {
+		Contato contato = new Contato(null, nome, codigo, email, telefone);
 		return repositorio.adicionarContato(contato);
 	}
 

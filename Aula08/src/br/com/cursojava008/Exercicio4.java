@@ -1,6 +1,7 @@
 package br.com.cursojava008;
 import java.util.Scanner;
 
+public class Exercicio4 {
 	public static void exercicio04(Scanner teclado){
 	String[] nomes = new String[3];
 	for(int index = 0; index < nomes.length; index++){
@@ -16,5 +17,6 @@ import java.util.Scanner;
 
 }
 
+}
 // Crie um programa que solicite o nome de 10 pessoas e em seguida apresente os nomes informados na ordem inversa
 //( o ultimo nome deve ser o primeiro digitado)

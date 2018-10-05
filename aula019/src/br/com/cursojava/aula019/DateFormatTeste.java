@@ -9,8 +9,8 @@ public class DateFormatTeste {
 
 	public static void main(String[] args) {
 		String data = "31/10/2018 16:42:40";
-		DateFormat dataFormatada = DateFormat.getDateTimeInstance(DateFormat.FULL,DateFormat.FULL,Locale.US);
-		DateFormat df = DateFormat.getDateInstance(DateFormat.LONG, Locale.US);
+		DateFormat dataFormatada = DateFormat.getDateTimeInstance();
+		DateFormat df = DateFormat.getDateInstance(DateFormat.FULL);
 		Date recebeDataFormada = null;
 		
 		

@@ -1,2 +1,0 @@
-# TranspoAcademy
-Arquivos aula TranspoAcademy

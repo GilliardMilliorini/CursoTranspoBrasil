@@ -1,0 +1,166 @@
+1 - create database db_teste2
+
+2 - create table Carro(
+id serial not null primary key,
+marca varchar(50) not null,
+modelo varchar(50) not null,
+cor varchar(15) not null,
+ano_fabricacao int not null,
+ano_modelo int  not null,
+placa varchar(7) not null
+
+);
+
+3 - insert into carro(marca,modelo,cor,ano_fabricacao, ano_modelo, placa)
+values
+('Ford', 'New Fiesta', 'Branco', 2014,2014,'DDD0011'),
+('Ford', 'Focus', 'Preto', 2014,2015,'FFP0000'),
+('Ford', 'Fusion', 'Prata', 2015,2015,'FUP1212'),
+('Fiat', '147', 'Branco', 1983,1983,'INU1313'),
+('Fiat', 'Uno', 'Vermelho', 2001,2001,'FUV1414'),
+('BMW', '320I', 'Prata', 2015,2015,'BMP1616')
+
+4 - select * from carro where marca = 'Ford'
+
+5 - select * from carro where marca = 'Fiat'
+
+6 - select * from carro where ano_fabricacao < 2000
+
+7 - select * from carro where ano_modelo = 2015
+
+8 - select * from carro where cor = 'Prata'
+
+9 - create table Cargo(
+	idCargo	integer not null primary key ,
+    nomeCargo	VARCHAR(50),
+    salarioBruto	DECIMAL(10,2),
+    descontoSalario	DECIMAL(10,2)
+
+);
+
+10- create table Colaborador(
+	idColaborador	integer not null primary key ,
+    nomeColaborador	VARCHAR(50),
+    idCargo	integer
+	
+
+);
+
+11 - create table "Colaborador_Ferias"(
+	data_saida	    date,
+    data_retorno    date ,
+	"idColaborador" bigint, 
+    foreign key ("idColaborador") references colaborador(idcolaborador)
+);
+	
+12 - 
+    
+insert into cargo(idCargo,nomeCargo, salarioBruto, descontoSalario)
+values
+(1,'Estagiário', 850.00, 0.00),
+(2,'Desenvolvedor Java Júnior - SE', 1150.00	,250.00),
+(3,'Desenvolvedor Java Pleno - SE', 1900.00, 400.00),
+(4,'Desenvolvedor Java Senior  - SE', 3000.00 ,600.00),
+(5,'Designer Gráfico' , 1580.00 ,360.00),
+(6,'Analista de Marketing', 2400.00,420.00),
+(7,'Desenvolvedor Java Web Júnior',1230.00, 260.00),
+(8,'Desenvolvedor Java Web Pleno',2170.00,680.00),
+(9,'Desenvolvedor Java Senior',3400.00, 700.00),
+(10,'Suporte Nível 1', 900.00,120.00),
+(11,'Suporte Nível 2',1600.00, 360.00),
+(12,'Suporte Nível 3',2100.00, 475.00),
+(13,'Web Master Nivel 1',1500.00, 356.00),
+(14,'Web Master Nível 2',2350.00, 580.00),
+(15,'Web Master Nível 3', 3600.00,720.00),
+(16,'Analista de Projetos ',5000.00,1020.00),
+(17,'Projetista',8000.00,1900.00),
+(18,'Arquiteto de Software',7500.00, 1750.00),
+(19,'Implantador de Sistemas',4600.00, 850.00),
+(20,'Desenvolvedor Java Mobile',6000.00,980.00)
+
+
+13 - 
+insert into colaborador(idColaborador,nomecolaborador, idcargo)
+values
+(1,'Daiana Cristina',null),
+(2,'Andréas Silver', 5),
+(3,'Juliana Ribeiro',13),
+(4,'Amanda Schultz', 7),
+(5,'Cristiana Lobo',10),
+(6,'Brenda Alvarez',6),
+(7,'Carla Oliveira',16),
+(8, 'Orlando Pamplona',19),
+(9,'Alex Marques',18),
+(10,'Santhyago Alves',20),
+(11,'Júlio César',1),
+(12,'Diego de Lima',20),
+(13,'Cleberson Kist',6),
+(14,'Everton Duarte',9),
+(15,'Vanessa Montres',5),
+(16,'Bianca Vasconselos',15),
+(17,'Daniel Silva',11),
+(18,'Ellen Moreira',17),
+(19,'Tatiana Holtrup',3),
+(20,'Viviane de Souza',14),
+(21,'Paloma Oliveira',20),
+(22,'Jéssica Mattos',2),
+(23,'Óliver Duvivier',4),
+(24,'Luana Silveira',1),
+(25,'Jennifer Verciani',5),
+(26,'Mariana Nascimento',8),
+(27,'Mônica Silvestre',11),
+(28,'Gabriela Novaes',12),
+(29,'George Marcel',15),
+(30,'Hélio Castro',1),
+(31,'Emanuela Gonzales',20),
+(32,'Priscila Medeiros',12),
+(33,'Bruna Conceição',4),
+(34,'Andriane Coelho',7),
+(35,'Rebeca Bortolato',15),
+(36,'Hellen Cristiana',18),
+(37,'Gustavo Souza',5),
+(38,'Élton Civieiro',4),
+(39,null ,17),
+(40,'Ramon Duarte',20),
+(41,'Fernando Duve',3),
+(42, null ,5),
+(43,'Patrícia Alves',16),
+(44,'Larissa Torres',7),
+(45,'Elisiane Peris',13)
+
+
+
+
+14 - 
+insert into "Colaborador_Ferias"("idColaborador", data_saida, data_retorno)
+values
+(1, to_date('03/01/2014', 'DD/MM/YYYY '), to_date('03/01/2014', 'DD/MM/YYYY')),
+(2, to_date('03/01/2014', 'DD/MM/YYYY '), to_date('03/02/2014', 'DD/MM/YYYY')),
+(3, to_date('03/01/2014', 'DD/MM/YYYY '), to_date('03/02/2014', 'DD/MM/YYYY')),
+(4, to_date('03/01/2014', 'DD/MM/YYYY '), to_date('03/02/2014', 'DD/MM/YYYY')),
+(5, to_date('03/01/2014', 'DD/MM/YYYY '), to_date('03/02/2014', 'DD/MM/YYYY')),
+(6, to_date('03/01/2014', 'DD/MM/YYYY '), to_date('03/02/2014', 'DD/MM/YYYY')),
+(7, to_date('03/01/2014', 'DD/MM/YYYY '), to_date('03/02/2014', 'DD/MM/YYYY')),
+(8, to_date('04/02/2014', 'DD/MM/YYYY '), to_date('07/03/2014', 'DD/MM/YYYY')),
+(9, to_date('04/02/2014', 'DD/MM/YYYY '), to_date('07/03/2014', 'DD/MM/YYYY')),
+(10, to_date('04/02/2014', 'DD/MM/YYYY '), to_date('07/03/2014', 'DD/MM/YYYY')),
+(11, to_date('04/02/2014', 'DD/MM/YYYY '), to_date('07/03/2014', 'DD/MM/YYYY')),
+(12, to_date('04/02/2014', 'DD/MM/YYYY '), to_date('07/03/2014', 'DD/MM/YYYY')),
+(13, to_date('04/02/2014', 'DD/MM/YYYY '), to_date('07/03/2014', 'DD/MM/YYYY')),
+(14, to_date('04/02/2014', 'DD/MM/YYYY '), to_date('07/03/2014', 'DD/MM/YYYY')),
+(15, to_date('08/03/2014', 'DD/MM/YYYY '), to_date('08/04/2014', 'DD/MM/YYYY')),
+(16, to_date('08/03/2014', 'DD/MM/YYYY '), to_date('08/04/2014', 'DD/MM/YYYY')),
+(17, to_date('08/03/2014', 'DD/MM/YYYY '), to_date('08/04/2014', 'DD/MM/YYYY')),
+(18, to_date('08/03/2014', 'DD/MM/YYYY '), to_date('08/04/2014', 'DD/MM/YYYY')),
+(19, to_date('08/03/2014', 'DD/MM/YYYY '), to_date('08/04/2014', 'DD/MM/YYYY')),
+(20, to_date('08/03/2014', 'DD/MM/YYYY '), to_date('08/04/2014', 'DD/MM/YYYY')),
+(40,to_date('03/10/2014', 'DD/MM/YYYY '), to_date('03/11/2014', 'DD/MM/YYYY')),
+(41,to_date('03/10/2014', 'DD/MM/YYYY '), to_date('03/11/2014', 'DD/MM/YYYY')),
+(42,to_date('03/10/2014', 'DD/MM/YYYY '), to_date('03/11/2014', 'DD/MM/YYYY')),
+(43,to_date('03/10/2014', 'DD/MM/YYYY '), to_date('03/11/2014', 'DD/MM/YYYY')),
+(44,to_date('03/10/2014', 'DD/MM/YYYY '), to_date('03/11/2014', 'DD/MM/YYYY')),
+(45,to_date('03/10/2014', 'DD/MM/YYYY '), to_date('03/11/2014', 'DD/MM/YYYY'))
+
+
+15 - 
+delete from colaborador where nomecolaborador is null  - dando erro de violação de chave estrangeira. não terminei de arrumar

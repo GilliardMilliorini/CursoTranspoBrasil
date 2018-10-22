@@ -1,0 +1,158 @@
+
+Name	Storage Size	Description	Range
+
+smallint 		2 bytes	small-range integer	-32768 to +32767
+
+integer			4 bytes	typical choice for integer	-2147483648 to +2147483647
+			
+bigint			8 bytes	large-range integer	-9223372036854775808 to +9223372036854775807
+
+decimal			variable	user-specified precision, exact	up to 131072 digits before the decimal point; up to 16383 digits after the decimal point
+
+numeric			variable	user-specified precision, exact	up to 131072 digits before the decimal point; up to 16383 digits after the decimal point
+
+real			4 bytes	variable-precision, inexact	6 decimal digits precision
+
+double precision	8 bytes	variable-precision, inexact	15 decimal digits precision
+
+smallserial		2 bytes	small autoincrementing integer	1 to 32767
+
+serial			4 bytes	autoincrementing integer	1 to 2147483647
+
+bigserial		8 bytes	large autoincrementing integer	1 to 9223372036854775807
+
+
+
+The following SQL-compatible functions can also be used to obtain the current time value for the corresponding data type:
+ CURRENT_DATE, 
+CURRENT_TIME, 
+CURRENT_TIMESTAMP, 
+LOCALTIME, 
+LOCALTIMESTAMP. 
+				-- comandos para trazer hora do sistemna
+
+
+-----------
+
+select count (*) as total
+from produtos;
+					-- select para verificar a quantidade total de produtos cadastrado no sistema
+
+----------
+
+select max (preco) as "mais caro"
+from produtos;				-- seleciona o produto com o maior preço cadastrado no banco da tabela preco.
+
+----------
+
+
+select avg (preco) as "mais caro"
+from produtos;
+
+					-- traz a media total de todos os produtos cadastrados no sistema
+
+-------
+
+select min (preco) as "mais caro"
+from produtos;				-- menor preço
+
+------------
+
+select * from produtos where
+preco <= (select avg (preco) 
+from produtos);				-- traz todos os produtos com o valor menor que a média total dos produtos somados
+
+--------
+select * from produtos where
+preco >= (select avg (preco) 
+from produtos);
+					-- traz os produtos com valor maior que a media total.
+
+---
+
+select * from produtos where
+preco = (select avg (preco) 
+from produtos);
+
+					-- traz um produto que tenha o valor igual a média total de todos os produtos cadastrados
+
+---------------------
+
+
+select sum(preco) as "total" from produtos
+						-- traz a soma do preco todos os valores do banco de dados
+
+---------
+
+select power(preco, 2) from produtos;
+ou
+select power(2,3)					-- efetua o calculo de potencia do valor do campo 
+
+-------------
+
+select sqrt(16)					-- efetua o calculo da raiz quadrada
+
+
+--------------------
+
+
+select trunc (preco) from produtos;
+
+						-- traz somente o valor inteiro dos produtos cadastrados no sistema
+
+-----------------
+
+select trunc (preco,2) from produtos;		-- traz o valor inteiro com 2 casas decimais 
+
+---
+
+
+select round (preco,1), preco from produtos;
+						-- roud serve para arredondar os valores decimais para inteiros.
+
+--------------------
+
+select * from contatos
+where nome like 'João%'
+						-- LIKE serve para trazer todas as informações que você precisa e não sabe como está cadastrado o nome completo.
+								OBS: NECESSITA UTILIZAR % ANTES OU DEPOIS DA PALAVRA PARA PESQUISAR  
+
+
+----
+
+
+select abs(preco)				-- utilizado para inorar os sinais negativos.
+
+---------
+
+
+select upper(nome) from contatos
+
+						-- traz as informações de uma coluna trocando tudo por  letra maiusculas
+
+-----------------
+
+
+select lower(nome) from contatos
+
+						-- traz as informaçõe das colunas trocando tudo por letra minuscula
+
+
+select substr(nome,1,2) from contatos
+
+				--Substring serve para pegar os caracteres apartir de uma posição informada n () no exemplo pega posicçao 1 e traz as 2 seguintes letras
+
+
+------------
+
+select length(nome) from contatos
+
+					-- traz a quantidade total de letras contidas na coluna nome
+
+----------------
+
+select length(trim('    Maria     '))		-- trim serve para retirar os espaços no começo e no final dos nomes, mas os do meio ele não retira.
+
+
+select length(replace('joão da Silva ',' ',''))
+						-- replace retira todos os espaços do nome.

@@ -1,0 +1,76 @@
+create table contatos(
+
+id serial not null primary key,
+    nome varchar(100) not null,
+    email varchar (100) not null,
+    telefone varchar(11)
+
+);
+
+
+insert into contatos(nome,email,telefone)
+values
+('João', 'joao@teste.com','33222211')
+
+
+create table produtos(
+id serial not null primary key,
+    nome varchar(100) not null,
+    preco decimal(10,2) not null
+
+);
+
+
+
+insert into produtos(nome,preco)
+values
+('produto 01', 10.99),
+('produto 02', 57.80),
+('produto 03', 200.00),
+('produto 04', 29.90),
+('produto 05', 14.87)
+
+
+
+select count (*) as total
+from produtos;
+
+
+
+select count (*) as total
+from produtos
+where preco < 20;
+
+
+select max (preco) as "mais caro"
+from produtos;
+
+select count (*) as total
+from produtos
+where preco < 20;
+
+
+select min (preco) as "mais caro"
+from produtos;
+
+
+select avg (preco) as "mais caro"
+from produtos;
+
+select * from produtos where
+preco <= (select avg (preco) 
+from produtos);
+
+
+select sum(preco) as "total" from produtos
+
+select sqrt(16)
+
+select trunc (preco) from produtos;
+
+select round (preco,1), preco from produtos;
+
+
+
+
+

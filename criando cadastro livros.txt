@@ -1,0 +1,304 @@
+
+create table autor(
+id serial not null,
+    nome varchar(50) not null,
+    sobrenome varchar(100) not null,
+    data_nascimento date not null,
+    PRIMARY KEY(id)
+);
+
+create table categorias(
+
+id serial not null,
+    nome varchar(50) not null,
+    PRIMARY key(id)
+);
+
+create table tags(
+id serial not null,
+    nome varchar(50)not null,
+    PRIMARY KEY(id)
+);
+
+create table livros(
+id serial not null,
+    titulo varchar(200) not null,
+    data_publicacao date not null,
+    edicao int not null,
+    sequencial int not null,
+    PRIMARY key (id),
+   "categoriaId" BIGINT ,
+    FOREIGN KEY ("categoriaId") REFERENCES categorias(id)
+);
+
+create table livros_autor(
+	"livroId" bigint,
+    "autorId" bigint,
+      FOREIGN KEY ("livroId") REFERENCES  livros(id),
+      foreign KEY ("autorId") REFERENCES autor(id)
+
+);
+
+
+create table livros_tags(
+
+    livroId bigint,
+    tagId bigint,
+    FOREIGN KEY ("livroId") REFERENCES  livros(id),
+      foreign KEY ("tagId") REFERENCES tags(id)
+
+);
+
+-- crie 5 autores
+-- cadastre 4 categorias
+-- cadastre 8 tags
+--cadastre 10 livros com ao mens 2  livros por categoria
+-- cadastre 10 livros_autor com ao menos 1 autor para cada lvro
+-- cadastre 10 livros_tags com ao menos 1 tag por livro
+
+
+
+
+
+
+
+
+
+
+
+
+insert into autor(nome,sobrenome,data_nascimento)
+values
+('João','da Silva', '25/05/1990'),
+('Maria', 'Pereira', '30/06/1968'),
+('Suzana', 'Medeiros','08/02/1985'),
+('Pedro', 'Moskovit','20/12/1995'),
+('Caio','de Souza', '29/07/1978')
+
+
+
+insert into categorias(nome)
+values
+('Romance'),
+('Terror'),
+('Suspense'),
+('Animação')
+
+
+
+insert into tags(nome)
+values
+('tag1'),
+('tag2'),
+('tag3'),
+('tag4'),
+('tag5'),
+('tag6'),
+('tag7'),
+('tag8')
+
+
+
+insert into livros(titulo, data_publicacao  ,edicao , sequencial , "categoriaId" )
+values
+('A volta dos que não foram', to_date ('25/10/2015', 'DD/MM/YYYY'),1, 1, 1),
+('As longas tranças de um careca', to_date('30/03/2000', 'DD/MM/YYYY'), 1,2,2),
+('o pato manco', to_date('25/05/2012', 'DD/MM/YYYY'),2,1,3),
+('melancia seca', to_date('05/03/2011', 'DD/MM/YYYY'), 2,1,2),
+('eita nois', to_date('01/01/2008', 'DD/MM/YYYY'), 3,2,1),
+('xuxu roxo', to_date('25/05/2003', 'DD/MM/YYYY'),3,3,3),
+('ai pai para', to_date('20/07/1998', 'DD/MM/YYYY'),1,1,4),
+('para nao tio', to_date('08/12/1999', 'DD/MM/YYYY'),1,2,4)
+('Michael jackon nao morreu', to_date('10/11/2018', 'DD/MM/YYYY'),1,2,4)
+('Michael jackon morreu sim mizeravi', to_date('15/11/2018', 'DD/MM/YYYY'),1,2,4)
+
+
+
+
+insert into "livros_autor" values
+(1,1),
+(2,1),
+(3,2),
+(4,2),
+(5,1),
+(6,3),
+(7,4),
+(8,4),
+(9,3),
+(10,5)
+
+
+
+insert into "livros_tags" values
+(1,1),
+(2,2),
+(3,3),
+(4,4),
+(5,5),
+(6,6),
+(7,7),
+(8,6),
+(9,3),
+(10,8)
+
+
+select	liv.titulo as titulo, 
+	cat.nome as categoria
+	from livros as liv
+	inner join "categorias" as cat
+	on liv."categoriaId" = cat.id;
+
+
+
+
+      select	liv.titulo as Livro, 
+	tg.nome as tags
+	from livros as liv
+	inner join "livros_tags" as lt on lt."livroId" = liv.id
+	inner join "tags" as tg	on lt."tagId" = tg.id;
+
+
+
+
+       select	liv.titulo as titulo, 
+	aut.nome	as autor
+	from livros as liv
+	inner join "livros_autor" as la on la."livroId" = liv.id
+	inner join "autor" as aut on la."autorId" = aut.id;
+
+
+
+
+
+
+    select	
+	tg.nome as tag,
+	liv.titulo as titulo, 
+	cat.nome as categoria,
+	aut.nome as autor 
+	from livros as liv
+    
+	inner join "livros_tags" as lt 	on lt."livroId" = liv.id
+    
+	inner join "tags" as tg	on lt."tagId" = tg.id
+    
+	inner join "categorias" as cat	on liv."categoriaId" = cat.id 
+    
+	inner join "livros_autor" as la	on la."livroId" = liv.id
+    
+	inner join "autor" as aut on la."autorId" = aut.id	
+    
+	where tg.nome = 'tag6';
+
+
+
+
+
+select	cat.nome,
+	count(cat.id)
+	from livros as liv
+	inner join "categorias" as cat	on liv."categoriaId" = cat.id
+	group by cat.nome
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Selecione os livros juntamente com suas categorias
+selecione os livros com suas tags
+selecione os livros com seus autores
+Escolha uma tag e selecione todos os livros que possuem a tag escolhhida, A consulta deve trazer as ingormações do livo, sua categoria e seus autores.
+Selecione  quantidade de livros agrupados por categoria
+Selecione a quantidade de livros agrupados por tag
+Selecione a quantidade de livros agrupados por autor
+selecione os autores que escreveram mais de 1 livro
+
+
+
+
+
+
+select	count(livros.id) "quantidade Livros",
+	categorias.nome as Categorias
+	from livros 
+	inner join "categorias" as cat	on liv."categoriaId" = cat.id
+	group by cat.nome
+
+(dando erro)
+
+
+
+
+
+select	count(livros.id) "quantidade Livros",
+	autor.nome as autor
+	from livros 
+inner join livros_autor on livros.id = livros_autor."livroId"
+inner join autor on autor.id = livros_autor."autorId"
+group by autor.id
+
+(dando erro)
+
+
+
+
+select	count(livros.id) "quantidade Livros",
+	autor.nome as autor
+	from livros 
+inner join livros_autor on livros.id = livros_autor."livroId"
+inner join autor on autor.id = livros_autor."autorId"
+group by autor.id
+having count (livros.id) > 1
+( deu certo, arrumar os anteriores)
+
+
+
+
+
+
+
+
+
+
+select preco round (preco * 1,5,2) as "preco venda"
+from produtos								-- cria tabela dinamica para inserir um campo com calculo matematico
+
+
+select preco round (preco * 1,5,2) as "preco venda"
+from produtos
+orderby desc									- ordena os valores do maior para o menor
+
+
+select preco round (preco * 1,5,2) as "preco venda"
+from produtos
+order by asc								-- ordena do menor para maior
+
+
+select preco round (preco * 1,5,2) as "preco venda"
+from produtos
+limit 2									-- limita a busca para no maximo 2 registros
+
+
+select preco round (preco * 1,5,2) as "preco venda"
+from produtos
+offset 2 limit 2							-- offset pula os registros informados e inucia no registro posterior
+
+
+
+
+
+
+------------
+
+
+
+

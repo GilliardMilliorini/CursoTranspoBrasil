@@ -1,0 +1,1560 @@
+Skip to content
+Features
+Business
+Explore
+Marketplace
+Pricing
+
+Search
+
+Sign in or Sign up
+0 0 0 EduBuchele/TranspoAcademy
+ Code  Issues 0  Pull requests 0  Projects 0  Insights
+Join GitHub today
+GitHub is home to over 28 million developers working together to host and review code, manage projects, and build software together.
+
+TranspoAcademy/TranspoAcademy.txt
+961d01d  2 hours ago
+@EduBuchele EduBuchele PostgreSQL Join
+     
+1527 lines (1276 sloc)  52.3 KB
+Transpo Academy
+
+Prof. Felipe da Rosa Oliveira
+9 9602-9682
+
+10/09/2018
+Java:
+Linguagem Programação
+	- Proposito Geral;
+	- Alto Nivel;
+	- Orientada a Objetos;
+		- Propriedades 
+		- Ações;	
+	- Fortemente Tipada;
+	- Compilada e Interpretada;
+
+Aula01: 10/09/2018
+	Variaveis e Setup Inicial
+Aula02: 11/09/2018
+	Operadores Matematicos
+Aula03: 12/09/2018
+	
+Variavel:
+Nome dado a um endereço de memoria;
+
+variaveis primitivas = armazenam direto na memoria principal;
+variaveis objeto = armazenam na memoria heap;
+
+Tamanho		Primitivo	Wrapper
+1byte		byte		Byte
+		boolean		Boolean
+
+2byte 		short		Short
+		char		Character
+
+4bytes 		int		Integer
+		float		Float
+
+8 bytes 	long		Long
+		double		Double
+
+
+" Machine Learning
+tirar o print e processar a imagem "
+
+Exercicios Aula01
+Dado as variaveis abaixo, escreva um programa que apresente o resultado das seguintes operações:
+int a = 10;
+int b = 9;
+int c = 8;
+
+1) Calcule a média dos numeros;
+2) Calcule a soma dos numeros;
+3) Calcule a soma dos numeros dividios pela media;
+4) Calcule o resto da divisao de a por b;
+5) Calcule a soma de todos os numeros subtraida o resultado da divisao de c por 4.
+
+Exercicios Aula02
+
+1) Dado um retangulo de base 20 e altura 30. Escreva um programa que calcule e apresente os seguintes valores:
+a) A area do retangulo
+b) O perimetro do retangulo
+
+2) Dado um circulo de 30cm de diametro. Calcule e apresente o vclor da area deste circulo.
+
+3) Dado as notas 10, 7, 5, 9, 10, 7, 8, 10 , 10,10. Calcule e apresente a soma e a média das notas.
+
+4) Dado que um veiculo percorre uma distancia de 200km em 240min. caclule a velocidade media em km/h
+
+5) Escreva um programa que calcule o valor de 7 elevado na potencia de 5;
+
+6) Utilizando a classe Math, crie um programa que calcule e apresente o maior numero entre 10,20,15;
+
+7) Utilizando a classe Math crie um programa que apresente o valor inteiro referente ao numero 13.36543;
+
+8) Utilizando a calsse Math Crie uym programa e escreva o valor absoluto dos numeros -10, 20, -50 e -1000;
+
+
+Aula3: 12/09/2018
+
+Conversao String -> Inteiro
+Integer.parseInt
+Conversao String -> Double
+Double.parseDouble
+https://docs.oracle.com/javase/8/docs/api/
+metodos de conversao
+parseInt
+toString
+valueOf
+Cada classe wrapper trabalha conversoes de primitivos para objetos e strings
+
+1) Escreva um programa que solicite dois numeros inteiro e em seguida escreva o valor do maior numero informado. Utilize Math.max.
+
+2) Escreva um programa que solicite 3 numeros reais e em seguida apresente o resultado da media dos numeros informados.
+
+3) Escreva um programa que solicite a idade de um usuario e em seguida apresente a idade do usuario após 20 anos.
+
+4) Escreva um programa que solicite a idade do usuario em anos e apresente o valor da idade informada em meses;(ex. 1ano = 12meses)
+
+5) Escreva um programa que solicite a idade do usuario em dias e em seguida aprense o valor em dias meses e anos. considere que cada mes possui 30 dias e que um ano equivale a 12 meses
+
+6) Escreva um programa que solicite o valor de ium produto e o percentual de desconto, em seuida o programa deve apresentar o valor do desconto e o valor do produto apos a aplicação do desconto.
+
+7) Escreva um programa que solicite 3 notas e em seguida calcule e apresente os seguintes dados:
+a) O valor da média
+b) O valor da maior nota( Math.max)
+c) O valor da menor nota (Math.min)
+
+8) Escreva um programa que solicite a base e a altura de um triangulo e em seguida calcule a area. (b.h)/2
+
+9) Escreva um programa que solicite 3 notas e em seguida calcule a media ponderada aplicando os pesos 2,3,5 respectivamente. Ao final o programa deve apresentar o resultado da media calculada.
+
+10) Escreva um programa que solicite o peso e a altura de uma pessoa e em seguida calcule o IMC desta pessoa. IMC = peso/(altura*altura)
+
+Aula04 - 13/09/2018
+
+////////////////////////////////////////////////////////////////////////////////////////////
+Trabalhando com GIT 
+
+// Inicia o Repositorio
+git init 
+//descobre o status do projeto
+git status
+//buscar o remoto
+git fetch origin master
+//importa os dados do remoto
+git pull origin master
+//cria os ignores
+nano .gitignore
+//escolhe as pastas que voce quer ignorar no commit
+o git ignore adicionar
+#eclipse workspace
+.metadata
+.recommenders
+RemoteSystemsTempFiles
+bin
+.class
+ctrl+x  /// salva e volta ao cmd
+
+//verificar os arquivos untracked e colocar os arquivos no stage para comitar depois
+git add .
+//gravar as alterações no repositorio
+git commit -m "Primeiro Commit"
+//enviar para o github
+git push origin master
+
+**********
+Estudar
+git Log
+git Clone
+git Checkout
+
+////////////////////////////////////////////////////////////////////////////////////////////
+Operadores Relacionais
+>
+<
+>=
+<=
+Operadores de Igualdade
+!=
+==
+
+Operadores Logicos
+&&
+||
+! 	nao
+^	ou exclusivo
+
+
+
+todas comparações retornam boolean (True or False)
+
+Aula05 14/09/2018
+1) Crie um programa que solicite o nome do usuario e emseguida informe a quantidade de letras do nome informado;
+2) Crie um programa que solicite 3 notas e em seguida calcule a media das notas. Se a media for maior ou igual a 7 escreva "Aprovado" senao escreva "Reprovado
+3) Crie um programa que solicite uma frase e em seguida apresente a frase digita sem as vogais.
+4) Escreva um programa que solicite a idade do usuario e em seguida apresente uma mensagem informando se o usuario pode fazer a CNH.
+5) Escreva um programa que solicite um numero e em seguida apresente iima mensagem informadno se o umero digitado foi "PAR" ou "IMPAR". Todo numero par deve ter resto da divisao por 2 igual a zero.
+ 6) Escreva um programa que solicite a idade, a altura e o peso de uma pessoa, em seguida calulce o IMC utilizando a formaula IMC = peso/altura*altura. O programa deve apresentar uma mensagem informadno se o ims esta abaixo, normal ou obeso de acordo com a tabela.
+Abaixo 17 = "Muito abaixo do Peso"
+17 a 18,49 = "Abaixo do Peso"
+18,5 a 24,99 = "peso Normal"
+25 a 29,99 = " Acima do Peso"
+30 a 34,99 = "Obesidade I"
+35 a 39,99 = " Obesidade II (severa)"
+Acima 40 = " Obesidade III (morbida)"
+
+7) Escreva um programa que solicite o valor do salario de uma pessoa e calcule o valor do imposto de renda conforme os dados abaixo
+Ate 1800. Isento
+de 1800,01 até 2400,00 = 7,5%
+de 2400,01 ate 3600,00 = 15%
+acima de 3600 = 27%
+
+
+1) Escreva um programa que solicite 2 números para o usuário e em seguida escreva o resultado da multiplicação do primeiro número pelo segundo.
+2) Escreva um programa que solicite 3 números para o usuário e em seguida escreva o resultado da soma do primeiro número com o terceiro número  e em seguida multiplique o resultado pelo segundo número informado. Mostre na tela o resultado da aplicação.
+3)Escreva um programa que solicite 3 notas de um aluno e em seguida calcule a média das notas. Caso a média seja maior ou igual a 9 escreva Excelente, caso a média seja maior ou igual a 8 e menor que 9 escreva "Muito Bom", caso a nota seja maior ou igual a 6 e menor que 8 escreva "Bom", caso a nota seja menor que 6 escreva "Insuficiente".
+
+4) Crie um programa que solicite 3 notas e em seguida calcule a média das notas. Caso a nota seja maior ou igual a 9 apresente a mensagem "Conceito A", caso a nota seja menor que 9 e maior ou igual a 7 apresente a mensagem "Conceito B", caso a nota seja menor que 7 e maior ou igual a 6 apresente a mensagem "Conceito C",caso a nota seja menor que 6 e maior ou igual a 5 apresente a mensagem "Conceito D", senão apresente a mensagem "Conceito Insuficiente".
+
+5) Crie um  que solicite 5 números para o usuário e em seguida escreva o maior número digitado.
+
+6) Crie um  que solicite 5 números para o usuário e em seguida escreva o menor número digitado.
+
+7) Crie um  que solicite o comprimento das arestas de um triângulo e em seguida escreva uma mensagem informando qual é o tipo d triangulo informado. (Equilátero,isóceles ou escaleno).
+Triângulo equilátero: possui os três lados com medidas iguais. 
+Triângulo isósceles: possui dois lados com medidas iguais. 
+Triângulo escaleno: possui os três lados com medidas diferentes. 
+
+
+3 Dicas sobre ingles para desenvolvedores
+
+
+Aula06: 17/09/2018
+1) Crie um programa que solicite um numero entre 1 e 12, e em seguida escreva o nome do mês correspondente ao numero digitado. Caso o usuario informe um numero fora do range (1-12) o programa deve apresentar uma mensagem indicando que o numero é Invalido;
+2) Escreva um programa que solicite um numero entre 1 e 3 para o usuario. E
+Em seguida escreva uma mensagem informando o valor da opção selecionado.
+As mensagens devem ser de cordo com a tabela abaixo:
+1 - Sacar
+2 - Depositar
+3 - Verificar Saldo
+![1-3] = Opção Invalida
+
+3) Escreva um programa que imprima o resultado da soma dos 50 primeiros numeros
+ inteiros positivos
+04) Escreva um programa que solicite 3 notas e em seguida calcule e apresente
+ o valor da media das notas.
+O programa deve ser executado até que a primeira nota tenha um valor negativo
+ 
+06) Escreva um programa que escreva todos os numeros primos entre 1 e 50.
+07) Escreva um programa que apresente o menu abaixo para o usuario, 
+e apos a escolha do usuario apresente uma mensagem correspondente ao tipo
+ de operação selecionado. O programa deve continuar executando até que o usuario 
+escolha a opção sair. Caso o usuario escolha uma opção diferente, o programa deve apresentar
+a mensagem "Opção Invalida".
+1 - Cadastrar Aluno 	-> Escolheu a opção Cadastrar Aluno
+2 - cadastrar Professor -> Escolheu a opção Cadastrar Professor
+3 - Cadastrar Turma	-> Escolheu a opção Cadastrar Turma
+4 - Sair
+
+
+Aula07 - 18/09/2018 
+9 em cada 10 profissionais sao contratados pelo perfil tecnico e demitido pelo comportamental
+
+professor Pierluigi Piazzi
+
+Utilizando o comando for execute os exercicios abaixo:
+1) Crie um programa que solicite um numero entre 1 e 20 e em seguida calcule e
+apresente o valor do fatorial do numero informado.
+2) Crie um programa que apresente os numeros pares entre 100 e 200;
+3) Crie um programa que solicite 5 numeros e em seguida escreva o valor do maior numero informado.
+4) Crie um programa que solicite 5 numeros e em seguida apresente o valor da soma e da media;
+5) Crie um programa que solicite uma frase e em seguida apresente as letras dos indices impares;
+6) Crie um programa que solicite uma palavra e em seguida escreva a palavra de forma inversa. (Ex. Felipe => epileF)
+7) Cire um programa que imprima os valores abaixo no console:
+X
+XX
+XXX
+XXXX
+XXXXX
+
+8) Crie um programa que imprima os calores abaixo no console
+#####
+####
+###
+##
+#
+
+Aula 08 - 19/09/2018
+
+
+///vetores // array
+
+1) Crie um programa que solicite 10 notas e em seguida calcule 
+a media das notas e escreva as notas digitas juntamenteo com o valor da media
+2) Crie um programa que crie um array com os valores 1,3,2 e em seguida processe o array para que os valores se posicionem na forma 3,2,1
+3) Crie um programa que solicite 5 notas e em seguida apresente o valor da maior nota juntamente com a posição da nota dentro do array.
+4) Crie um programa que solicite o nome de 10 pessoas e em seguida apresente os nomes informados na ordem inversa. ( O ultimo nome deve ser o primeiro);
+
+buble sort
+
+
+
+Aula 09 - 20/09/2018
+
+Pratica 01) Dada a matriz abaixo, calcule a soma dos valores da sua diagonal principal.
+|10,09,08|
+|07,09,10|
+|10,07,08|
+
+1) Escreva um programa que solicite 3 notas para uma turma de 10 alunos e 
+em seguida calcule a média de cada aluno juntamente com a media da turma. 
+Ao final o programa deve apresentar as 3 notas do aluno juntamente com sua media
+e posteriormente deve apresentar a media final da turma.
+
+2) Data a tabeça abaixo:
+	meias	camisas	camisetas
+Jan	100	200	150	
+Fev	75	26	100
+Mar	150	200	250
+Abr	50	210	240
+
+Calcule as seguintes operações:
+a) A quantidade de peças vendidas
+b) A quantidade de meias vendidas
+c) A quantidade de peças vendidas mês a mês
+d) A quantidade de camisas + a quantidade de camisetas vendidas mês a mês
+e) O tipo de peça mais vendida em cada mês.
+
+
+Aula11 - 24/09/2018
+OBjeto  - representação em memória - new
+Classe - Especificação do do objeto, todas informações. "Planta da casa"
+
+Objeto
+- Caracteristica => Variaveis
+- Ações =>métodos
+
+Métodos
+Visibilidade | Modificador | Tipo | Nome | (Parametros){
+Corpo;
+}
+
+Visibilidade: (Caso nao informado é padrão)
+padrão: Somente dentro do package
+private 
+public
+protect
+
+Modificador: (Opcional)
+static
+
+Tipo: (Obrigatorio)
+tipo que o metodo retorna
+void > nao retorna nada
+String > retorna String
+int
+...
+
+Nome: (Obrigatorio)
+nome do metodo
+
+Parametros: (Opcional)
+vai estar dentro dos parenteses()
+contem a lista de paramentros | Tipo e nome
+
+Corpo: (Obrigatorio)
+vai estar estar dentro das chaves{}
+onde é escrito a logica
+os comandos a serem executados
+
+Declaração de variaveis;
+Toda variavel deve começar por letra, um _ ou um $; 
+Apartir do segundao caracter por conter letras, 
+	numeros ou caracteres de conexao( _, $);
+Nao são permitidos caracteres especiais(-, # ,@ ,% ,. , etc);
+Deve-se evitar caracteres com acentuação;
+Não tem limite de tamanho;
+Não podem ser usados nomes de palavras reservadas;
+
+Convenções para a declaração de variáveis e métodos:
+Devem ser escritas com letras minusculas;
+Caso sejam formadas por palavras compostas, devem seguir padrão CamelCase,
+	onde a primeira palavra é definida em minuscula e as demais palavras
+	são escritas apenas com a primeira letra Maiscula;
+Ex.:
+livro;
+pessoaFisica;
+ComprovatePagamentoPessoaFisica;
+
+01) Crie uma classe "Produto" que possua os atributos nome e preço, 
+a classe tambem deve possuir metodos de configuração e acesso para cada um dos atributos.
+
+02) Crie uma classe Veiculo, que possua os atributos:
+marca, modelo, cor. anod e fabricação e ano modelo;
+A classe tambem deve possuir metodos de configuração e acesso para cada um dos 
+atributos definidos.
+
+03) Crie uma classe Aluno que deve possuir os atributos
+nome, telefone e matricula
+A classe tambem deve possuir metodos de configuração e acesso para cada um dos 
+atributos definidos.
+
+Aula12- 25/09/2018
+Continuação do projeto
+
+Aula13 - 26/09/2018
+01) Crie um programa de cadastro de contatos conforme as definições abaixo:
+O contato de possuir os seguintes atributos:
+id: Integer
+nome: String
+telefone: String
+email: String
+
+O programa deve apresentar opções para:
+Cadastrar um novo contato;
+Listar os contatos Cadastrados
+Realizar a pesquisa de um contato através do nome
+Realizar a pesquisa de um contato através do numero de telefone
+Todo Contato deve obrigadoriamente possuir um nome com ao menos 3 caracteres
+Não deve ser permitida a inclusão de contatos com nome em branco;
+
+O sistema deve ter como base estrutural, o sistema de produtos realizado na aula12;
+
+
+Aula14 - 27/09/2018
+Crie uma aplicação para cadastro de veiculos,
+cada veivulo deve possuir as seguintes propriedades:
+id: Integer
+marca: String
+modelo: String
+placa: String
+anoFabricação: int
+anoModelo: ind
+cor: String
+
+O sistema deve permitir o cadastro de um novo veiculo,
+ a listagem de todos os veiculos, 
+a pesquisa de veiculos por marca,
+a pesquisa de veiculos por modelo,
+a pesquisa de veiculos por placa,
+a pesquisa de veiculos por anoFabricação,
+e a remoção de veiculos;
+
+marca e modelo são propriedades obrigatorias e 
+devem possuir ao menos 3 caracteres nao vazios(espaços);
+
+a placa é uma propriedade obrigatoia e deve
+possuir obrigatoriamente 7 caracteres;
+
+O ano de fabricação deve ser maior ou igual a 2000.
+O ano modelo não deve ser menor que o ano de fabricação;
+
+Aula 15 - 28/09/2018
+Crie um programa para realizar o cadastro de Clientes. 
+Cada cliente deve possuir as seguintes propriedades:
+int id;
+String nome
+String email
+String telefone
+String endereço
+String tipo (Silver, Gold, Platinum)
+
+Endereço:
+String rua;
+int numero;
+String complemento;
+String bairro;
+String cidade;
+String cep;
+String estado;
+
+O sistema deve permitir o cadastro e listagem de clientes
+Filtro de clientes por tipo;
+Filtro de clientes por cidade;
+
+O nome do cliente deve possuir ao menos 3 caracteres e
+não devem ser permitido cadastro com nome em branco;
+
+Todos os dados do endereço, com excessao do complemento, 
+são obrigatorios e nao devem possuir valores em branco.
+
+O Sistema deve permitir exclusão de clientes através
+da informação do cliente.
+
+Aula16 - 01/10/2018
+Assuntos da Semana:
+Herança  ok
+Interface
+Abstract Class
+Static
+Final
+Polimorfismo ok
+É Um ok
+Tem Um
+Solid
+
+**** 	Construtor
+Se nao for definido um construtor
+Entao o Java irá criar um construtor pra voce
+
+Construtor sem parametros 
+com a visibilidade da classe
+
+Tem o mesmo nome da classe
+Não tem tipo de retorno.
+Pode ter zero ou mais parametros
+e pode ter a visibilidade public, protegida, pacote(default) ou privada.
+
+Crie uma classe Pessoa com os atributos, código e nome, em Seguida
+Altere a classe Contato do projeto Aula13 para que use 
+a classe Pessoa como Super Classe
+
+Crie um construtor com todos os parametros necessarios para a criação
+de um contato e ajuste o codigo para utilizar o novo construtor;
+
+
+Aula17 - 02/10/2018
+Interfaces
+Classes Abstratas
+
+Aula18 - 03/10/2018
+TDD - testes automatizados
+
+Crie um conversor entre graus Celsius e Fahrenheit, 
+o conversor deve ter opções de realizar a conversão entre quaisquer 
+um dos dois tipos de escala.
+O desenvolvimento deve ser realizado utilizando os conceitos TDD.
+
+Crie uma calculadora de Descontos seguindo as seguintes regras:
+Valores negativos devem retornar zero;
+Valores positivos ate 1800 devem retornar exatamente o valor informado
+Valores entre 1800,01 e 2400 devem retornar o valor informado aplicando
+um desconto de 5%;
+Valores entre 2400,01 e 3599,99 devem retornar o valor informado aplicando
+um desocnto de 22%;
+Valores a partir de 3600 devem retornar o valor informado aplicando um 
+desconto de 32%;
+
+Aula19 - 04/10/2018
+	
+Calendar 
+DateFormat
+NumberFormat
+
+Aula20 - 05/10/2018
+Apresentação Artigo
+Class Date
+Class Calendar
+Class DataFormat
+Class NumberFormat
+Class Locale
+
+Proximos Assuntos
+
+new DateTime API
+Final
+Colletions
+	List
+	Map
+	Set
+Lambda
+Stream
+JDBK
+JPA/Hibernate
+JSF
+JAX-RS
+Manipularção de Arquivos
+	Texto
+	Binario
+Banco De Dados
+Padrões de Projeto
+SOLID
+Arq. Transpo
+
+Aula21 - 08/10/2018
+	
+Thwoable 	
+	Error
+	Exception
+		RunTimeException
+//Thwoable 	 Classe mae dos erros e excessoes
+		 Duas filhas Error e Exception
+Error, 
+O programador não deve tentar tratar.
+Geralmente são problemas de memoria, e nao de codigo.
+Exceptions
+É obrigátorio o tratamento, (Try Catch) ou declarar (Throws)
+	Filhas diretas, Exception Checkeds, o Java solicita o tratamento.
+RunTimeException é UnChecked
+	Acontecem em tempo de execução
+
+
+java.lang.IllegalArgumentException
+	Indica que um argumento ou parametro indicado é ilegal ou inapropriado
+	para o metodo utilizado
+java.lang.IllegalStateException
+	Foi invocado um metodo ou ação Ilegal ou no tempo errado.
+	ou o objeto nao esta preparado para a ação.
+	Informado parametros errados de um objeto
+java.lang.ArrayIndexOutOfBoundsException
+	Indica a tentativa de acessar um index errado de um Array
+	Numeros negativos ou maiores que o tamanho do Array
+java.lang.NullPointerException
+	A Excessao é lançada quando tentamos acessar um Objeto Null:
+		Instanciando um metodo de um objeto Null
+		Acessando ou modificando um campo de objeto Null
+		Acessando ou modificando objetos null de um array
+java.sql.SQLException
+	A classe informa sobre erros no acesso ao Banco de Dados
+java.io.IOException
+	A classe informa que ocorreu uma excessao produzida por falha ou interrupção de uma operação IO
+java.io.FileNotFoundException
+	A Classe informa que ocorreu uma falha ao acessar um arquivo. 
+	Nome, Local ou tipo de arquivo Invalido ou inacessivel
+	FileInputStream, FileOutputStream, and RandomAccessFile
+
+
+Aula22 - 09/10/2018
+LIST
+O faz a interface, pra que serve
+principais suubclasses que implementam:
+
+ArrayList
+LinkedList
+Vector
+
+Collections
+LIST
+uma coleção de ordenação. dá ao usuario controle preciso dos elementos de uma lista. Pode acessar os elemetos pela posição da lista e pesquisar elementos na lista;
+
+Diferente dos conjuntos, as listas permitem elementos duplicados, permitindo multiplos elementos nulos. Podem conter pares de elementos iguais, e caso o usuario queira restringir para que não haja é possivel atraves de lançamento de excessões em tempo de execução(RunTimeExceptions)
+
+Fornece quatro métodos para acesso possicional aos elementos.
+
+A interface List fornece um iterador especial, chamado ListIterator, que permite a inserção e a substituição de elementos, além do acesso bidirecional, além das operações normais que a interface Iterator fornece. Um método é fornecido para obter um iterador de lista que inicia em uma posição especificada na lista
+
+A interface List fornece dois métodos para inserir e remover com eficiência vários elementos em um ponto arbitrário da lista
+
+algumas implementações proíbem elementos nulos e algumas têm restrições sobre os tipos de seus elementos. A tentativa de adicionar um elemento não elegível gera uma exceção não verificada, normalmente NullPointerException ou ClassCastException
+
+Nota: Embora seja permitido que as listas se contenham como elementos, recomenda-se extrema cautela: os métodos equals e hashCode não são mais bem definidos nessa lista.
+    
+
+* ARRAYLIST
+Implementando todas as operações de List, o ArrayList permite  metodods de manipular o tamanho da matriz que guardará a lista, Parecida com o Vector o ArrayList não está sincronizada. as Operações size, isEmpety, get, set, iterator e listIterator são executadas constantementes, A operação add é executado em tempo constante conforme a quantidade de itens a adicionar, e as demais operações sao executadas em tem linear.
+Sua capacidade é modificada conforme a quantidade de itens da lista. Podendo te aplicativos que aumente a capacidade de uma ArrayList antes de adicionar os itens da lista usando o ensureCapacity.
+
+
+principais metodos: add(), clear(), ensureCapacity() get(), set(), indexOf(), isEmpty(), listInterator(), remove(), size(), sort(), toArray(), subList()
+
+Os iteradores retornados pelos métodos iterator e listIterator dessa classe são fail-fast: se a lista for estruturalmente modificada a qualquer momento após a criação do iterador, de qualquer forma, exceto pelos métodos remove ou add do iterador, o iterador lançará um ConcurrentModificationException. Assim, em face da modificação concorrente, o iterador falha rapidamente e de forma limpa, em vez de arriscar um comportamento arbitrário e não determinístico em um tempo indeterminado no futuro.
+o comportamento fail-fast dos iteradores deveria ser usado apenas para detectar bugs
+
+* LINKEDLIST
+Implementação da lista duplamente vinculada das interfaces List e Deque. Todas as operações funcionam como poderia ser esperado para uma lista duplamente vinculada. As operações indexadas na lista percorrerão a lista do início ou do fim, o que estiver mais próximo do índice especificado. Permite a adicção e remoção de dados nas suas duas extremidades.
+
+Assim como o ArryList ela não é sincronizada, precisando sincronizar caso haja pelo menos uma modificação estrutural(adicionar ou excluir um item da lista)
+Os iteradores retornados pelos métodos iterator e listIterator dessa classe são fail-fast: se a lista for estruturalmente modificada a qualquer momento após a criação do iterador, de qualquer forma, exceto pelos métodos remove ou add do iterador, o iterador lançará um ConcurrentModificationException. Assim, em face da modificação concorrente, o iterador falha rapidamente e de forma limpa, em vez de arriscar um comportamento arbitrário e não determinístico em um tempo indeterminado no futuro.
+o comportamento fail-fast dos iteradores deveria ser usado apenas para detectar bugs
+* VECTOR
+A classe Vector implementa uma matriz expansível de objetos. Como uma matriz, ela contém componentes que podem ser acessados usando um índice inteiro. No entanto, o tamanho de um Vetor pode aumentar ou diminuir conforme necessário para acomodar a adição e a remoção de itens após a criação do Vetor.
+Cada vetor tenta otimizar o gerenciamento de armazenamento mantendo uma capacidade e um incremento de capacidade. A capacidade é sempre pelo menos tão grande quanto o tamanho do vetor; geralmente é maior porque, à medida que componentes são adicionados ao vetor, o armazenamento do vetor aumenta em partes do tamanho da capacidade Incremento. Um aplicativo pode aumentar a capacidade de um vetor antes de inserir um grande número de componentes; isso reduz a quantidade de realocação incremental.
+
+Os iteradores retornados pelos métodos iterator e listIterator dessa classe são fail-fast: se a lista for estruturalmente modificada a qualquer momento após a criação do iterador, de qualquer forma, exceto pelos métodos remove ou add do iterador, o iterador lançará um ConcurrentModificationException. Assim, em face da modificação concorrente, o iterador falha rapidamente e de forma limpa, em vez de arriscar um comportamento arbitrário e não determinístico em um tempo indeterminado no futuro.
+o comportamento fail-fast dos iteradores deveria ser usado apenas para detectar bugs
+
+///////////////
+Set
+Não permite valores duplicados
+TreeSet ordena
+HashSet + perfomace e sem ordenação
+
+////////////
+MAP
+HashMap
+Chave + Valor
+Permite valores vazios, mas as chaves precisam de valor
+Não sao sincronizados
+Nao tem ordenação
+
+TreeMap
+Tem Ordenação
+Não sao sincronizados
+
+HashTable 
+nao permite valores vazios
+Sincronizado
+Thread Safe
+
+
+Collections
+Precisa adicionar equals() e hascode()
+e para ordenação interface comparable
+//////Interfaces
+	List  
+	-	Possui Ordenação
+	-	Valores Duplicados
+	-	Tem Indice
+	Set
+	-	Não tem ordenação Garantida
+	- 	Não tem Valor Duplicado
+	-	Não tem indice;
+
+
+
+
+java.util
+	Map
+	-	Não tem ordenação Garantida
+	- 	Pode haver Valores Duplicados
+	-	Não tem indice;
+	- 	Possui Chave e Valor
+
+
+
+
+Aula23 - 10/10/2018
+ENUM
+FINAL
+Se nao utilizar HashSet + Equals nos comparativos ele busca um endereço de memoria, 
+e nao vai achar os produtos de forma segura
+
+***...Estudar as regras do HashCode e Equals
+
+Streams
+https://www.oracle.com/technetwork/pt/articles/java/streams-api-java-8-3410098-ptb.html
+
+
+Aula24 - 11/10/2018
+01) Crie uma ENUM TipoContato com os seguintes valores:
+FAMILIA, 
+AMIGO,
+TRABALHO,
+OUTROS;
+
+02) Crie uma classe Contato com os atributos abaixo:
+Integer id;
+String nome;
+String email;
+String telefone;
+TipoContato tipo;
+
+03) Crie uma Interface denominada RepositorioContato com os seguintes metodos:
+boolean adicionar(Contato contato)
+boolean editar(Contato contato)
+java.util.List<Contato> buscarTodos();
+java.util.List<Contato> buscarPorNome (String nome);
+java.util.List<Contato> buscaPorTelefone (String telefone);
+java.util.List<Contato> buscaPorTipo (TipoContato tipo);
+Contato buscaPorId (Integer id);
+boolean remover (Contato contato);
+
+04) Crie uma classe denominada RepositorioContatoMemory que implemente 
+a interface RepositorioContato. Esta classe deve armazenar os dados dos 
+contatos em uma Lista em memória.
+
+05) Crie uma classe de testes que realize os testes unitários para todos
+ os métodos da classe RepositorioContatoMemory.
+
+
+Aula 25 - 12/10/2018- Feriado
+
+Aula 26 - 16/10/2018
+Banco de Dados Relacionais:
+Guardam os dados em forma de tabelas;
+Linhas x Colunas
+
+create database nome_database;
+//depois selecionar a DB ola
+
+create table nome_tabela(
+nome_data_coluna tipo_de_dado restrições,
+nome_data_coluna tipo_de_dado restrições,
+...
+);
+
+Tipos de Dados:
+https://www.postgresql.org/docs/9.3/static/datatype.html
+integer
+varchar(100) //limite de 100 caracteres
+
+
+Restrição é opcional
+not null // campo é obrigatorio, não pode ser nulo
+
+//remover tabela cachorros
+drop table cachorros;
+
+Adicionar coluna na tabela
+alter table nome_Tabela add column nome_coluna tipo_coluna;
+alter table pessoas add column idade integer;
+
+Remover uma Coluna na Tabela:
+alter table nome_tabela drop column nome_coluna;
+alter table pessoas drop column idade;
+
+Alterar nome da Coluna;
+alter table nome_tabela rename column nome_coluna to nome_novo_coluna
+alter table pessoas rename column idade to idades;
+
+Alterar o nome da tabela:
+alter table nome_antigo rename to nome_novo;
+alter table cargos rename to "Cargos";
+
+Alterar o tipo da coluna:
+alter table nome_tabela alter column nome_coluna type tipo_coluna;
+alter table pessoas alter column idade type varchar(3);
+//parar converter um string em integer ele pede um cast
+alter table pessoas alter column idade type integer USING idade::integer
+
+O postgress é caseSensitive
+para utilizar palavras compostas devemos usar " "
+create table "pessoaJuridica"(
+id int not null); 
+// para casos com select é mais comum.
+
+Inserir dados na tabela
+insert into pessoas(id, nome) values (1, 'João da Silva')
+//ou
+insert into pessoas(id, nome) values 
+(2, 'Maria de Souza'),
+(3, 'Fernando Cruz');
+//ou
+insert into pessoas values (4, 'Mario Fernando')
+//ou
+insert into pessoas(id, nome, apelido) values (5, 'Adão', 'maninho');
+
+Buscar dados das pessoas;
+
+select * from pessoas;
+select nome, apelido from pessoas;
+select nome, apelido from pessoas where id = 1;
+select nome, apelido from pessoas where id >= 3;
+select nome, apelido from pessoas where id <> 2;
+//    <> diferente
+
+Buscar lista e ordenar
+select * from pessoas order by id;
+select * from pessoas order by nome;
+
+Atualizar dados da tabela
+uptade pessoas set apelido = 'mano' where id =1;
+// nao esquecer do where, senao ele altera todos os dados da lista
+//alterando dois campos simultaneos
+update pessoas set apelido = 'maninha', nome = 'Eva Oliveira' where id = 2;
+
+Remover dados da tabela
+delete from pessoas where id = 3;
+
+//Agrupar por marcas
+select marca, count(marca) from veiculos group by marca;
+select marca, avg(ano) from veiculos group by marca;
+select marca, avg(ano) from veiculos group by marca having avg(ano) > 2012;
+*******************************************************************************
+
+/////////////Exercicios
+1) Crie uma base de dados com o nome rhDatabase;
+2) Dentro da base de dados rhDatabase inclua a tabela com o nome
+funcionarios, e que possua as colunas id , nome
+3) Inclua a coluna idade com o tipo varchar(100)
+4) inclua a coluna setor com o tipo int;
+5) altere a coluna setor para tipo varchar(100)
+6) crie a coluna dependentes com tipo int
+7) remova a coluna dependentes
+8) crie a tabela Cargos com os campo id int, nome carchar(100), descricao carchar(1000)
+9) altere a coluna nome para varchar(255)
+10) Crie a tabela setores com os campos id int e nome varchar
+
+11) Crie uma base de dados prodDatabase;
+	create database "prodDatabase";
+12) Dentro da base de dados prodDatabase inclua a tabela Produto com as seguintes colunas:
+id int, nome varchar(100), valor decimal(10,4)
+	create table "Produto " (
+id int, 
+nome varchar(100), 
+valor decimal(10,4)
+);
+13) Dentro da base de dados prodDatabase inclua a tabela Pedido com as seguintes Colunas:
+id int, codigo int, cliente varchar(255, dataCriacao datetime(timestamp ou date)
+create table "Pedido " (
+id int,
+codigo int,
+cliente varchar(255),
+dataCriacao date
+);
+14) Dentro da base de dados prodDatabase inclua a tabela PedidoItem com as seguintes Colunas:
+idPedido int, idProduto int, quantidade int
+create table "PedidoItem" (
+idPedido int, 
+idProduto int, 
+quantidade int
+);
+15) Dentro da base de dados prodDatabase inclua a tabela Entregas com as seguintes Colunas:
+idPedido int, rua varchar(100), numero varchar(1000), bairro varchar(100) cidade varchar(255)
+create table "Entregas" (
+idPedido int, 
+rua varchar(100), 
+numero varchar(1000), 
+bairro varchar(100), 
+cidade varchar(255)
+);
+16) Na tabela Entregas altere a coluna rua para varchar(255)
+alter table "Entregas" alter column rua type varchar(255);
+17) Na tabela Entregas inclua a coluna complemento varchar(255)
+alter table "Entregas" add column complemento varchar(255);
+18) Na tabela Entregas inclua a coluna cep varchar(8)
+alter table "Entregas" add column cep varchar(8)
+19) Na tabela Entregas inclua a coluna estado varchar(100)
+alter table "Entregas" add column estado varchar(100);
+20) Remova a coluna Estado da tabela entregas
+alter table "Entregas" drop column estado;
+21) Apague a base de dados rhDatabase;
+// para apagar é necessario fechar, o app de comandos e reconectar na database
+drop database rhDatabase;
+22) Apague a base de dados prodDatabase;
+drop database "prodDatabase";
+23) Crie uma base de dados chamada capitulo004;
+create database capitulo004;
+24) Crie uma tabela Produtos com as colunas:
+id int primary key, nome varchar(200), preco decimal(10,2)
+create table Produtos(
+id int primary key, nome varchar(200), preco decimal(10,2)
+);
+Insira os seguintes valores na tabela produtos
+id	nome			valor
+1	'Televisor 32pol' 	1300.00
+2	'Sofá 3 Lugares'	2500.00
+3	'Jogo de Cozinha'	5600.00
+4	'Guarda Roupa'		2150.90	
+insert into Produtos(id, nome, preco) values 
+(1,'Televisor 32pol',1300.00),
+(2,'Sofá 3 Lugares',2500.00),
+(3,'Jogo de Cozinha',5600.00),
+(4,'Guarda Roupa', 2150.90);
+
+25) Altere o valor do televisor para 1399.90
+update produtos set preco = 1399.90 where id =1;
+26) altere o nome do jogo de cozinha para "jogo de cozinha modular"
+update produtos set nome = 'jogo de cozinha modular' where id =3;
+27) Selecione todos os produtos
+select * from Produtos;
+28) Selecione apenas o produto com id = 1
+select * from produtos where id =1;
+29) Selecione apenas o nome e o valor de todos os produtos
+select nome, preco from produtos;
+30) Remova o produto co id=4
+delete from produtos where id = 4;
+31) Escreva o comando que cria a tabela Carro com os seguintes atributos:
+create table "Carros" 
+(id int not null,
+marca varchar(50) not null,
+modelo varchar(50) not null,
+cor varchar(15) not null,
+ano_fabricacao int not null,
+ano_modelo int not null,
+placa varchar(7) not null);
+
+32) incluir as seguintes informações na tabela Carro:
+insert into "Carros" 
+(id, marca, modelo, cor, ano_fabricacao, ano_modelo, placa)
+values
+(1, 'Ford', 'New Fiesta', 'Branco', 2014, 2014, 'DDD0011'),
+(2, 'Ford','Focus', 'Preto', 2014, 2015, 'FFP0000'),
+(3, 'Ford', 'Fusion', 'Prata', 2015, 2015, 'FUP1212'),
+(4, 'Fiat', '147', 'Branco', 1983, 1983, 'INU1313'),
+(5, 'Fiat', 'Uno', 'Vermelho', 2001, 2001, 'FUV1414'),
+(6, 'BMW', '320I', 'Prata', 2015, 2015, 'BMP1616');
+
+33) Selecionar os carros da marca Ford
+select * from "Carros" where marca = 'Ford';
+34) Selecionar os carros da marca Fiat
+select * from "Carros" where marca = 'Fiat';
+35) Selecionar os carros da com ano de fabricacao menor que 2000
+select * from "Carros" where ano_fabricacao < 2000;
+36) Selecionar os carros da com ano modelo = 2015
+select * from "Carros" where ano_modelo = 2015;
+37) Selecionar os carros de cor Prata
+select * from "Carros" where cor = 'Prata';
+
+Aula27 - 17/10/2018
+https://www.postgresql.org/docs/9.3/static/
+select CURRENT_DATE, CURRENT_TIME, CURRENT_TIMESTAMP, LOCALTIME, LOCALTIMESTAMP
+
+Adicionar ENUM no DB e no Java para garantir os dados
+
+CREATE TYPE mood AS ENUM ('sad', 'ok', 'happy');
+CREATE TABLE person (
+    name text,
+    current_mood mood
+);
+INSERT INTO person VALUES ('Moe', 'happy');
+SELECT * FROM person WHERE current_mood = 'happy';
+ name | current_mood 
+------+--------------
+ Moe  | happy
+(1 row)
+
+create table contatos (
+id serial not null primary key,
+nome varchar(100) not null,
+email varchar(120) not null,
+telefone varchar (11)
+);
+insert into contatos (nome, email, telefone) values 
+('Eduardo','edu@edu.com.br','99999-8888'),
+('Maria','maria@gmail.com.br','98888-8888'),
+('Jose','jose@gmail.com.br','98888-7894');	
+
+create table produtos(
+id serial not null primary key,
+nome varchar(100) not null,
+preco decimal(10,2) not null
+);
+
+insert into produtos (nome, preco)values
+('Produto 01', 10.99),
+('Produto 02', 57.80),
+('Produto 03', 200.00),
+('Produto 04', 5.15),
+('Produto 05', 29.90),
+('Produto 06', 14.87)
+;
+
+select count(*) from produtos;
+select count(*) as total from produtos;
+select count(*) as total from produtos where preco > 50;
+select * from produtos;
+select max(preco) as total from produtos;
+select * from produtos where preco = (select max(preco) as "maisCaro" from produtos);
+select min(preco) as "maisBarato" from produtos;
+select avg(preco) as "media" from produtos;
+select * from produtos where preco >= (select avg(preco) as "media" from produtos);
+select sum(preco) as "total" from produtos;
+
+select abs(preco) from produtos // traz os valores sem sinal
+select power(preco, 2) from produtos // faz todos os precos na potencia 2
+select sqrt(16) // raiz quadrada
+select trunc(preco) from produtos// retorna os valores inteiros
+select trunc(preco,1) from produtos // retorna os valores com 1 casa
+select round(preco,1), preco from produtos // arredonda os valores com 1 casa
+
+select * from contatos where nome = 'Edu"; // busca somente o Edu
+select * from contatos where nome like 'Edu%'; // Busca todos com Edu  o % pega todos items apos
+select * from contatos where nome like '%Edu'; // qualquer coisa antes de Edu 
+select * from contatos where nome like '%u%'; // qualquer nome que tenha u
+select upper(nome), nome from contatos; // busca todos nomes com UperCase
+select lower(nome), nome from contatos; // busca todos nomes com LowerCase
+select substr(nome, 1,2) from contatos // utilizando Substring apartir do caracter 1 pega 2 caracteres
+select length(nome) as "Qtdd Letras", nome from contatos // saber a quantidade de caracteres
+select length(trim('     Maria     ')); trim =  remove os espaços em branco
+select replace ('Joao da Silva ', ' ', ''); // retira os espaços em branco
+
+////////////Exercicio
+Cire uma DB com o nome CasasBahia;
+	create database "CasasBahia";
+Crie uma tabela produtos com as seguintes colunas:
+	create table produtos (
+	id serial not null primary key,
+	nome varchar(100),
+	preco decimal(10,2)
+	);
+Insira os seguintes produtos
+	insert into produtos (nome, preco) values
+	('Televisao LED 42', 1400.40),
+	('Televisao LED 32', 1250.30),
+	('Aparelho de Jantar Tramontina', 800.0),
+	('Playstation 4', 2400.00),
+	('Playstation 3', 720.99),
+	('Sofa', 2400.60),
+	('Fritadeira Elétrica', 200),
+	('Forno Microondas 201', 630.90),
+	('Banheira Hidromassagem G', 19999.90),
+	('Roupeiro 6 portas', 1110.10),
+	('Notebook Del Vostro', 2200.40),
+	('Iphone 6S', 3500.23);
+
+Selecione os produtos com preco entre 1000 e 2000
+	select * from produtos where preco > 1000 and preco < 2000;
+Selecione os produtos cujo nome tenha Televisao
+	select * from produtos where nome like 'Televisao%';
+Selecione ps produtos cujo nome tenha Playstation
+	select * from produtos where nome like 'Playstation%';
+Selecione a média de preços dos produtos
+	select avg(preco) from produtos;
+Selecione o preço do produto mais caro;
+	select max(preco) from produtos;
+Selecione o preço do Produto mais barato
+	select min(preco) from produtos;
+Selecione a soma do preço de todos os produtos;
+	select sum(preco) from produtos;
+Selecione o nome de todos os produtos em caixa alta;	
+	select upper(nome) from produtos;
+Selecione o nome de todos os produtos em caixa baixa;
+	select lower(nome) from produtos;
+Selecione a data atual;
+	select CURRENT_DATE;
+	select now()
+Selecione a quantidade de caracteres do nome de cada produto;
+	select length(nome) as "Qtdd Letras", nome from produtos;
+Selecione os primeiros 7 caracteres dos nomes de cada produto;
+	select substr(nome,1,7) from produtos;
+Selecione os 5 caracteres a partir da 3a posição dos nomes de cada produtos
+	select substr(nome,3,5) from produtos
+Selecione a quantidade de produtos cadastrados;
+	select count(*) as "Qtdd Produtos" from produtos
+Selecione a quantidade de produtos cadastrados que possuem valor maior que 1000;
+	select count(*) as "Qtdd Produtos" from produtos where preco >= 1000;
+Selecione a quantidade de produtos cadastrados que possuem valor menor que 1000;
+	select count(*) as "Qtdd Produtos" from produtos where preco <= 1000;
+Selecione a soma dos produtos que possuem valor maior que 1300
+	select sum(preco) from produtos where preco >= 1300;
+Selecione o maior valor dos produtos que possuem valor menor que 1500
+	select max(preco) from produtos where preco <= 1500;
+Selecione a media do valor dos produtos que possuem valor menor que 1200
+	select avg(preco) from produtos where preco <= 1200;
+Selecione a media do valor dos produtos que possuem valor maior que 1000
+	select avg(preco) from produtos where preco >= 1000;
+Selecione a media do valor dos produtos que possuem valor entre 10000 e 20000
+	select avg(preco) from produtos where preco >= 10000 and preco <= 20000;
+Selecione o nome e o preco do produto com maior preco;
+	select nome, preco from produtos where preco = (select max(preco) from produtos);
+
+Crie uma tabela com nome Contatos com as seguintes Colunas:
+create table "Contatos"(
+codigo serial not null primary key,
+nome varchar(100) not null,
+email varchar(120)
+);
+Insira os dados abaixo:
+insert into "Contatos" (nome, email) values
+('Maria', 'maria@teste.com'),
+('Marcelo', 'marcelo@teste.com'),
+('Adriana', 'adriana@teste.com'),
+('Fernando', 'fernando@teste.com'),
+('Gregório', 'greg@teste.com'),
+('Anderson', 'anderson@teste.com'),
+('Fabiana', 'fabiana@teste.com'),
+('Deise', 'deise@teste.com'),
+('Damaris', 'damaris@teste.com'),
+('Daniel', 'daniel@teste.com'),
+('Claudia', 'claudia@email.com'),
+('Claudenice', 'claudenice@gmail.com'),
+('Claudilene', 'claudilene@gmail.com'),
+('Rafael', 'rafael@hotmail.com'),
+('Rafaela', 'rafaela@terra.com');
+
+Escreva o comando utilizado para selecionar todos os contatos da tabela Contatos
+	select * from "Contatos";
+Escreva o comando utilizado para selecionar todos os nomes da tabela Contatos
+	select nome from "Contatos";
+Escreva o comando utilizado para selecionar todos os emails da tabela Contatos
+	select email from "Contatos";
+Escreva o comando utilizado para selecionar todos os contatos que o nome inicia com 'A'
+	select * from "Contatos" where nome like 'A%';
+Escreva o comando utilizado para selecionar todos os contatos que o nome inicia com 'C'
+	select * from "Contatos" where nome like 'C%';
+Escreva o comando utilizado para selecionar todos os contatos que o nome inicia com 'cl'
+	select * from "Contatos" where nome like 'cl%';
+	select * from "Contatos" where lower(nome) like 'cl%';
+Escreva o comando utilizado para selecionar todos os contatos que possuem o código >10
+	select * from "Contatos" where codigo >10;
+Escreva o comando utilizado para selecionar todos os contatos que possuem o email @teste
+	select * from "Contatos" where email like '%@teste%';
+Escreva o comando utilizado para selecionar todos os contatos que possuem o email @hotmail
+	select * from "Contatos" where email like '%@hotmail%';
+Escreva o comando utilizado para selecionar todos os contatos que possuem o email @gmail
+	select * from "Contatos" where email like '%@gmail%';
+Escreva o comando utilizado para selecionar todos os contatos que possuem o email @terra
+	select * from "Contatos" where email like '%@terra%';
+Escreva o comando utilizado para selecionar todos os contatos que possuem o email @teste
+ e código menor que 7
+	select * from "Contatos" where email like '%@teste%' and codigo <7 ;
+Escreva o comando utilizado para deletar o Contato que possui o email claudenice@gmail.com
+	delete from "Contatos" where email = 'claudenice@gmail.com';
+Escreva o comando para excluir os Contatos que possuem o código >10;
+	delete from "Contatos" where codigo > 10;
+Escreva o comando para apagar todos dados da tabela Contatos;
+	delete from "Contatos";
+
+
+create table veiculos(
+id serial not null primary key,
+marca varchar(50) not null,
+modelo varchar(50) not null,
+ano int not null
+);
+
+insert into veiculos(marca, modelo, ano)
+values
+('Ford','Ka', 2007),
+('Ford','Fusion', 2018),
+('Ford','Ranger', 2017),
+('Chevrolet','Corsa', 2003),
+('Chevrolet','Onix', 2017),
+('Fiat','Chronos', 2018),
+('Fiat','Tempra', 1996),
+('Fiat','Palio', 2015),
+('Fiat','Uno', 2018);
+
+
+select marca, count(marca) from veiculos group by marca;
+select marca, avg(ano) from veiculos group by marca;
+select marca, avg(ano) from veiculos group by marca having avg(ano) > 2012;
+select marca, modelo avg(ano) from veiculos group by marca, modelo having avg(ano) > 2012;
+select count(*),ano from veiculos group by ano;
+
+Aula 28 - 18/10/2018
+
+select to_char(now(), 'DD/MM/YYYY');
+https://www.postgresql.org/docs/current/static/functions-formatting.html
+
+
+create table pagamentos (
+	id serial not null primary key,
+	valor decimal(10,2) not null,
+	"dataPrevisao" timestamp without time zone not null,
+	"dataPagamento" timestamp without time zone not null,
+	descricao varchar(500) not null
+);
+
+insert into pagamentos(valor,"dataPrevisao", "dataPagamento",descricao)
+values
+(29.90, to_timestamp('05/09/2018 23:59', 'DD/MM/YYYY HH24:MI'), null, 'Prestação 01'),
+(200.00, to_timestamp('07/10/2018 10:20', 'DD/MM/YYYY HH24:MI'), to_timestamp('07/10/2018 10:20', 'DD/MM/YYYY HH24:MI'), 'CELESC'),
+(990.00, to_timestamp('13/08/2018 23:59', 'DD/MM/YYYY HH24:MI'), to_timestamp('13/08/2018 13:30', 'DD/MM/YYYY HH24:MI'), 'Seguro Automóvel'),
+(29.90, to_timestamp('05/10/2018 23:59', 'DD/MM/YYYY HH24:MI'), null, 'Prestação 02'),
+(290.90, to_timestamp('15/10/2018 23:59', 'DD/MM/YYYY HH24:MI'), null, 'Prestação 01'),
+(29.90, to_timestamp('05/10/2018 23:59', 'DD/MM/YYYY HH24:MI'), null, 'Cartão 01'),
+(59.90, to_timestamp('05/09/2018 23:59', 'DD/MM/YYYY HH24:MI'), null, 'Telefone'),
+(129.27, to_timestamp('18/11/2018 23:59', 'DD/MM/YYYY HH24:MI'), null, 'Luz'),
+(499.89, to_timestamp('20/10/2018 23:59', 'DD/MM/YYYY HH24:MI'), null, 'Curso Nodejs'),
+(29.90, to_timestamp('05/12/2018 23:59', 'DD/MM/YYYY HH24:MI'), null, 'Prestação 03');
+
+select * from pagamentos
+
+//pagamentos atrasados
+select * from pagamentos where "dataPrevisao" < now() and "dataPagamento"is null;
+select to_char("dataPrevisao",'DD/MM') from pagamentos where "dataPrevisao" < now() and "dataPagamento"is null;
+select to_char("dataPrevisao",'DD'), to_char("dataPrevisao",'month') from pagamentos where "dataPrevisao" < now() and "dataPagamento"is null;
+//pagamentos adiantados
+select to_char("dataPrevisao",'DD/MM') from pagamentos where "dataPagamento" < "dataPrevisao";
+
+create table pais (
+	id serial not null,
+	nome varchar(100) not null,
+	primary key(id)
+);
+
+create table filho(
+	id serial not null,
+	nome varchar(100) not null,
+	"paiId" bigint, 
+	primary key(id),
+	foreign key("paiId") references pais(id)
+);
+ ************* inner join
+// traz o que é comum nas duas tabelas
+select
+	fl.id,
+	fl.nome, 
+	pa.nome as pai
+from 
+	filho as fl
+inner join 
+	pais as pa 
+on 
+	pa.id = fl."paiId";
+
+*************** left join
+// traz todos os dados do left, tendo relação ou nao com a 2a tabela
+// traz todos os filhos, mesmo tendo pai null
+select
+	fl.id,
+	fl.nome, 
+	pa.nome as pai
+from filho as fl
+left join pais as pa 
+on pa.id = fl."paiId";
+
+
+*************** right join
+select
+	fl.id,
+	fl.nome, 
+	pa.nome as pai
+from filho as fl
+left join pais as pa 
+on 
+	pa.id = fl."paiId" 
+where 
+	pa.id is null;
+
+
+select
+	fl.id,
+	fl.nome, 
+	pa.nome as pai
+from filho as fl
+right join pais as pa 
+on pa.id = fl."paiId" 
+where fl.id is null;
+
+===============================
+exercicio
+create table funcionarios(
+	id serial not null primary key,
+	nome varchar (100) not null
+	);
+create table dependentes(
+	id serial not null primary key,
+	nome varchar (100) not null
+	);
+create table "funcionarios_dependentes"(
+	"funcId" bigint not null,
+	"dependId" bigint not null,
+	foreign key("funcId") references funcionarios(id),
+	foreign key("dependId") references dependentes(id)
+	);
+
+insert into funcionarios(nome) values
+('Adão'),('Eva'),('João'),('Maria'),('Ana'),('Fernando'),('Mariana');
+
+insert into dependentes(nome) values
+('Adão Jr'),('Amanda'),('Joana'),('Clarisse'),('Carmen'),('Diego'),('Mara');
+
+insert into "funcionarios_dependentes"("funcId","dependId") values
+(1,1),(2,1),(3,2),(4,2),(5,3),(5,4),(5,5);
+		
+//zerar tabela
+truncate table dependentes restart identity cascade
+
+//tabela relação funcionario com dependentes
+select
+	func.nome as funcionario, 
+	dep.nome as dependente 
+from 
+	dependentes as dep
+inner join 
+	"funcionarios_dependentes" as fd 
+on 
+	fd."dependId" = dep.id
+inner join
+	funcionarios as func
+on 
+	func.id = fd."funcId";
+
+
+//tabela com quantidades de filhos pra cada funcionarios
+select	func.nome as funcionario, 
+	count(dep.nome)
+from dependentes as dep
+inner join "funcionarios_dependentes" as fd on 	fd."dependId" = dep.id
+inner join funcionarios as func on func.id = fd."funcId"
+group by func.nome
+
+// Crie uma tabela autor com os seguintes atributos:
+create table autor(
+id serial not null primary key,
+nome varchar(50) not null,
+sobrenome varchar(100) not null,
+"data_nascimento" date not null
+);
+
+create table categorias(
+id serial not null primary key,
+nome varchar(50) not null
+);
+
+create table tags(
+id serial not null primary key,
+nome varchar(50) not null
+);
+
+create table livros(
+id serial not null primary key,
+titulo varchar(200) not null,
+"data_publicacao" date not null,
+edicao int not null,
+sequencial int not null,
+"categoriaId" bigint not null,
+foreign key(categoriaId) references categorias(id)
+);
+
+create table "livros_autor"(
+	"livroId" bigint not null,
+	"autorId" bigint not null,
+	foreign key("livroId") references livros(id),
+	foreign key("autorId") references autor(id)
+	);
+create table "livros_tags"(
+	"livroId" bigint not null,
+	"tagId" bigint not null,
+	foreign key("livroId") references livros(id),
+	foreign key("tagId") references tags(id)
+	);
+
+Cadastre:
+5 autores
+	insert into autor (nome, sobrenome, "data_nascimento")
+	values
+	('Agatha', 'Christie', to_timestamp('12/01/1976', 'DD/MM/YYYY')),
+	('Vinicius', ' de Morais', to_timestamp('13/10/1913', 'DD/MM/YYYY')), 
+	('Carlos', ' Drummond de Andrade', to_timestamp('31/10/1902', 'DD/MM/YYYY')),
+	('Thiago', 'Leite e Carvalho', to_timestamp('19/04/1986', 'DD/MM/YYYY')), 
+	('Rodrigo', 'Turini', to_timestamp('30/07/1992', 'DD/MM/YYYY')); 
+4 categorias
+	insert into categorias (nome)
+	values
+	('Literatura Brasileira'),
+	('Literatura Estrangeira'),
+	('Informatica'),
+	('Poemas'),
+	('Contos');
+
+8 tags
+	insert into tags (nome)
+	values('JAVA'),('Orientação a Objetos'),('Historia Real'),
+	('Portugues'),('Ingles'),('Romantico'),('Maiores 18 anos'),('Ficção');
+10 Livros com ao menos 2 livros por categoria
+	insert into livros (titulo, "data_publicacao", edicao, sequencial, categoriaId)
+	values
+	('Orientação a Objetos', to_timestamp('01/09/2016', 'DD/MM/YYYY'), 1, 1, 3), 
+	('Java 9 -  Interativo, reativo e modularizado', to_timestamp('01/09/2017', 'DD/MM/YYYY'), 1, 1, 3), 
+	('Contos de aprendiz', to_timestamp('21/06/1951', 'DD/MM/YYYY'), 1, 1, 5), 
+	('Amar se aprende amando', to_timestamp('26/09/1987', 'DD/MM/YYYY'), 1, 1, 4), 
+	('Para Viver um Grande Amor', to_timestamp('04/10/1962', 'DD/MM/YYYY'), 2, 1, 1), 
+	('Nova Antologia Poética', to_timestamp('21/10/2010', 'DD/MM/YYYY'), 2, 2, 4), 
+	('Ten Little Niggers', to_timestamp('06/11/1939', 'DD/MM/YYYY'), 1, 1,2), 
+	('Assassinato no Campo de Golfe', to_timestamp('07/04/1923', 'DD/MM/YYYY'), 1, 1,2), 
+	('O Cinema de Meus Olhos', to_timestamp('29/11/1991', 'DD/MM/YYYY'), 1, 1, 1), 
+	('Contos Plausíveis', to_timestamp('27/09/1994', 'DD/MM/YYYY'), 2, 1, 5)
+10 Livros_autor com ao menos 1 autor para cada livro
+	insert into livros_autor ("livroId","autorId")
+	values
+	(1,4),
+	(2,5),
+	(3,3),
+	(4,3),
+	(5,2),
+	(6,2),
+	(7,1),
+	(8,1),
+	(9,2),
+	(10,3)
+	
+10 livros_tags com ao menos 1 tag por livro
+insert into "livros_tags" ("livroId",	"tagId")
+	values
+	(1,1),(1,2),
+	(2,1),
+	(3,3),(3,4),
+	(4,6),
+	(5,6),(5,7),
+	(6,4),
+	(7,5),(7,7),
+	(8,8),(8,7),
+	(9,4),
+	(10,4)
+
+01) Selecione os livros juntamente com suas categorias
+	select	liv.titulo as titulo, 
+	cat.nome as categoria
+	from livros as liv
+	inner join "categorias" as cat
+	on liv."categoriaId" = cat.id;
+
+
+02) Selecione os livros com suas tags
+	select	liv.titulo as titulo, 
+	tg.nome as tag
+	from livros as liv
+	inner join "livros_tags" as lt
+	on lt."livroId" = liv.id
+	inner join "tags" as tg
+	on lt."tagId" = tg.id;
+
+03) Selecione os livros com seus autores
+	select	liv.titulo as titulo, 
+	aut.nome,
+	aut.sobrenome
+	from livros as liv
+	inner join "livros_autor" as la
+	on la."livroId" = liv.id
+	inner join "autor" as aut
+	on la."autorId" = aut.id;
+
+04) Escolha uma tag e selecione todos os livros que possuem a tag escolhida.
+A consulta deve trazer as informações do livro, categoria e seus autores.
+	select	
+	tg.nome as tag,
+	liv.titulo as titulo, 
+	cat.nome as categoria,
+	aut.nome as autor, 
+	aut.sobrenome
+	from livros as liv
+	inner join "livros_tags" as lt
+	on lt."livroId" = liv.id
+	inner join "tags" as tg
+	on lt."tagId" = tg.id
+	inner join "categorias" as cat
+	on liv."categoriaid" = cat.id 
+	inner join "livros_autor" as la
+	on la."livroId" = liv.id
+	inner join "autor" as aut
+	on la."autorId" = aut.id	
+	where tg.nome = 'JAVA';
+
+05) Selecione a quantidade de livros agrupados por categoria
+	select	cat.nome,
+	count(cat.id)
+	from livros as liv
+	inner join "categorias" as cat
+	on liv."categoriaid" = cat.id
+	group by cat.nome
+
+06) Selecione a quantidade de livros agrupados por tag
+	select	tg.nome,
+	count(tg.id)
+	from livros as liv
+	inner join "livros_tags" as lt
+	on lt."livroId" = liv.id
+	inner join "tags" as tg
+	on lt."tagId" = tg.id
+	group by tg.nome
+
+07) Selecione a quantidade de livros agrupados por autor
+	select	aut.nome, 
+	aut.sobrenome,
+	count(aut.id)
+	from livros as liv
+	inner join "livros_autor" as la
+	on la."livroId" = liv.id
+	inner join "autor" as aut
+	on la."autorId" = aut.id
+	group by aut.nome, aut.sobrenome
+
+08) Selecione os autores que escreveram mais de um livro.
+	select	aut.nome, 
+	count(aut.id)
+	from livros as liv
+	inner join "livros_autor" as la
+	on la."livroId" = liv.id
+	inner join "autor" as aut
+	on la."autorId" = aut.id
+	group by aut.nome
+	having count(aut.id)>1;
+© 2018 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Press h to open a hovercard with more details.

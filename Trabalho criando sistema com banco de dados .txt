@@ -1,0 +1,28 @@
+Crie um sistema para cadastro de produtos. O sistema deve apresentar um menu com as opções abaixo e deve conter a implementação de todas as atividades necessárias para a realização das aç~pes definidas no menu.
+
+1 - Cadastrar produtos
+2 - Listar produtos
+3- Listar produtos por faixa de preço
+4- listar produtos por nome
+5 - Editar produto 
+6- Remover produto
+
+Deve ser criado na base de dados curso uma tabela produtos contendo as seguintes colunas:
+
+produtos
+id serial not null primary key,
+nome varchar(200) not null,
+preco decimal(10.2) not null.
+
+O sistema não deve permitir o cadastro de produtos com preco menor que R$0,01.
+O sistema deve implementar uma interface RepositorioProduto
+interface RepositorioProduto{
+	public List<Produto> buscarTodosodos();
+	public List<Produto> buscarPorNome(String nome);
+	public List<Produto> buscarPorPreco(double minimo, double maximo);
+	public Produto buscarPorId(Integer id);
+	pblic void inserir(Produto produto);
+	Public void atualizar(Produto produto);
+	public void remover(Integer id);
+	public int contar();
+}

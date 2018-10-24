@@ -1,4 +1,4 @@
-package br.com.cursojava.aula030;
+package br.com.cursojava;
 
 public class Main {
 

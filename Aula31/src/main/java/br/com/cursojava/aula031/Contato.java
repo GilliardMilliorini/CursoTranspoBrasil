@@ -7,27 +7,38 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity					// representa uma entidade do banco de dados
-@Table(name="pessoas")	// indica o nome da tabela que vamos utilizar, caso nome da tabela e do class forem o mesmo nao e necessario informar.
-public class Pessoa {
-	
-	@Id				// indica que a propriedade irá se vincular com a coluna da tabela que tenha a chave primaria
-	@GeneratedValue(strategy = GenerationType.IDENTITY) // indica que o id será utilizado o mesmo padrao do IDENTITY - Serial neste caso
-	Integer id;
-	
-	@Column(nullable = false)	// informa que este campo será informado pela coluna nome e que não pode ser nulo o campo 
-	String nome;
-	
 
-	public Pessoa() {
+@Entity
+@Table(name="\"TBL_Contatos\"")			// utilizar essa identação para quando a tabela no Banco for com formatação maiuscula.
+public class Contato {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
+	
+	@Column(nullable = false)
+	private String nome;
+	
+	@Column(nullable = false, unique = true)
+	private String email;
+	
+	@Column(nullable = false)
+	private String telefone;
+	
+	
+	public Contato() {
 		super();
-		
+	
 	}
-	public Pessoa(Integer id, String nome) {
+	
+	public Contato(Integer id, String nome, String email, String telefone) {
 		super();
 		this.id = id;
 		this.nome = nome;
+		this.email = email;
+		this.telefone = telefone;
 	}
+	
 	public Integer getId() {
 		return id;
 	}
@@ -40,6 +51,19 @@ public class Pessoa {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getTelefone() {
+		return telefone;
+	}
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -47,6 +71,7 @@ public class Pessoa {
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		return result;
 	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -55,18 +80,21 @@ public class Pessoa {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Pessoa other = (Pessoa) obj;
+		Contato other = (Contato) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
 		} else if (!id.equals(other.id))
 			return false;
 		return true;
+	
 	}
 	@Override
 	public String toString() {
-		return "Pessoa [id=" + id + ", nome=" + nome + "]";
+		return "Contato [id=" + id + ", nome=" + nome + ", email=" + email + ", telefone=" + telefone + "]";
 	}
+	
+	
 	
 	
 	

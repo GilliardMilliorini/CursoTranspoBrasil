@@ -5,26 +5,23 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-@Entity					// representa uma entidade do banco de dados
-@Table(name="pessoas")	// indica o nome da tabela que vamos utilizar, caso nome da tabela e do class forem o mesmo nao e necessario informar.
+@Entity
+@Table(name="pessoas")
 public class Pessoa {
 	
-	@Id				// indica que a propriedade irá se vincular com a coluna da tabela que tenha a chave primaria
-	@GeneratedValue(strategy = GenerationType.IDENTITY) // indica que o id será utilizado o mesmo padrao do IDENTITY - Serial neste caso
-	Integer id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
 	
-	@Column(nullable = false)	// informa que este campo será informado pela coluna nome e que não pode ser nulo o campo 
-	String nome;
-	
+	@Column
+	private String nome;
 
-	public Pessoa() {
-		super();
-		
-	}
+	public Pessoa() {}
+
 	public Pessoa(Integer id, String nome) {
-		super();
 		this.id = id;
 		this.nome = nome;
 	}
@@ -63,11 +60,9 @@ public class Pessoa {
 			return false;
 		return true;
 	}
-	@Override
-	public String toString() {
-		return "Pessoa [id=" + id + ", nome=" + nome + "]";
-	}
 	
 	
 	
+	
+
 }

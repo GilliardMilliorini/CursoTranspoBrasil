@@ -18,7 +18,7 @@ public class Main {
 		System.out.println(p.getId());
 		System.out.println(p.getNome());
 		p.setNome("Tiburcio da silva Brasil pereira ");		
-		//entitymanager.persist(p);
+		//entitymanager.persist(p);		// utilizado quando foi criar a primeira vez o registro
 		
 		String sql = "select count(*) from pessoas";
 		
@@ -28,7 +28,7 @@ public class Main {
 		System.out.println(p.getId());
 		System.out.println(p.getNome());
 		
-		entitymanager.getTransaction().commit();
+		entitymanager.getTransaction().commit();	// execura os comandos no banco para realizar as operacoes no banco
 		entitymanager.close();
 		
 		JPAUtil.shutdown();

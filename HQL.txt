@@ -1,0 +1,56 @@
+
+
+----------------------------
+
+HQL
+
+
+Select All Retorna todos os dados cadastrados na tabela solicitada, sem fazer nenhum tipo de filtro de valores.
+
+Select  from "nome da tabela" ou somente from "nome da tabela"
+
+----
+
+Ordenando Resultados
+Para ordenar os resultados de uma consulta HQL podemos utilizar a clausula order by ascendente (asc) ou descendente (desc). Em HQL podemos fazer como no exemplo:
+
+from Produto p where p.preco > 25.0 order by p.preco desc
+
+
+Se quisermos um comando “order” para mais de uma propriedade basta separarmos por vírgulas como abaixo:
+
+from Produto p order by p.nome asc, p.preco asc
+
+
+----
+Assiciações
+O Hibernate também suporta cinco diferentes tipos de joins: inner join, cross join, left outer join, right outer join e full outer join.
+
+se utilizar o cross join não precisamos especificar nada, basta colocar as classes separadas por vírgulas após o from, como exemplificado abaixo:
+
+from Produto p, DetalhesProduto d
+
+--
+A cláusula INNER JOIN permite usar um operador de comparação para comparar os valores de colunas que estejam em tabelas associadas desde que as mesmas tenham comparadores de campos com primary key e foreign key.
+Para utilizarmos o inner join devemos fazer da seguinte forma:
+
+select d.descricao, p.nome, p.preco from Produto p 
+ inner join p.detalhesProduto as d
+
+ -----
+ 
+ Comandos de Agregação
+ 
+avg(nome da propriedade): Retorna a média do valor da propriedade.
+count(nome da propriedade ou *): Retorna o número de vezes que a propriedade ocorre no resultado.
+max(nome da propriedade): O valor máximo do valor da propriedade.
+min(nome da propriedade): O valor mínimo do valor da propriedade.
+
+
+Exemplo de utilização de min e max
+select min(produto.preco), max(produto.preco) from Produto produto
+select avg(produto.preco) from Produto produto
+select count(*)from Produto produto
+
+
+

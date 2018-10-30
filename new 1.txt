@@ -1,0 +1,60 @@
+package aula035;
+
+
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
+
+
+
+public class CriteriaExemplos {
+	public static void main(String[] args) {
+		
+		System.out.println("Imprimindo todos os campos da tabela");
+		EntityManager em = JPAUtil.getEntityManagerFactory().createEntityManager();
+		CriteriaBuilder cb = em.getCriteriaBuilder();
+		CriteriaQuery<Produto> prod = cb.createQuery(Produto.class);
+		Root<Produto> p = prod.from(Produto.class);
+		prod.select(p);
+		List<Produto> results1 = em.createQuery(prod).getResultList();
+		  for (Produto result : results1) {
+		      System.out.println(result);
+		  }
+		
+		 CriteriaQuery<Object[]> q = cb.createQuery(Object[].class);
+		 Root<Produto> p2 = q.from(Produto.class);
+		 System.out.println("Imprimindo dois campos da tabela como array");
+		 q.select(cb.array(p2.get("nome"), p2.get("preco")));
+		 List<Object[]>results = em.createQuery(q).getResultList();
+		  for (Object[] result : results) {
+		      System.out.println("Produto: " + result[0] + ", Preço: " + result[1]);
+		  }
+		 System.out.println("Imprimindo dois campos da tabela como multiselect");
+		 q.multiselect(p2.get("nome"), p2.get("preco"));
+		 results = em.createQuery(q).getResultList(); 
+		 for (Object[] result : results) {
+		      System.out.println("Produto: " + result[0] + ", Preço: " + result[1]);
+		  }
+		 System.out.println("Imprimindo dois campos da tabela com contrutor");
+		 q.select(cb.construct(Object[].class,p2.get("nome"), p2.get("preco")));
+		 results = em.createQuery(q).getResultList(); 
+		 for (Object[] result : results) {
+		      System.out.println("Produto: " + result[0] + ", Preço: " + result[1]);
+		  }
+		 System.out.println("Ordenar por preço");
+		 q.orderBy(cb.desc(p2.get("preco")));
+		 results = em.createQuery(q).getResultList(); 
+		 for (Object[] result : results) {
+		      System.out.println("Produto: " + result[0] + ", Preço: " + result[1]);
+		  }
+		 
+		 System.out.println("Maximo");
+		 q.multiselect(cb.max(p2.get("preco")));
+		 results = em.createQuery(q).getResultList(); 
+		 for (Object[] result : results) {
+		      System.out.println("Produto: " + result[0] + ", Preço: " + result[1]);
+		  }

@@ -1,0 +1,20 @@
+Criteria
+
+Vantagens:
+Verificação de erros – Muitos erros podem ser detectados em tempo de compilação;
+Segurança – como as consultas são construídas pelo motor da API, você fica praticamente imune a SQL injections;
+Queries dinâmicas podem ser construídas mais facilmente, ao invés montar strings complexas.
+Tipagem forte – a JPA criteria API leva vantagem em relação à Hibernate Criteria API em relação a verficação de tipos.
+Desvantagens:
+Complexidade – uma vez que a maioria dos desenvolvedores está acostumada com o SQL/HQL/JPQL, migrar para uma API de criteria não é simples.
+
+
+
+
+EntityManager instance is used to create a CriteriaBuilder object.
+CriteriaQuery instance is used to create a query object. This query object’s attributes will be modified with the details of the query.
+CriteriaQuery.from method is called to set the query root.
+CriteriaQuery.select is called to set the result list type.
+TypedQuery<T> instance is used to prepare a query for execution and specifying the type of the query result.
+getResultList method on the TypedQuery<T> object to execute a query. This query returns a collection of entities, the result is stored in a List.
+

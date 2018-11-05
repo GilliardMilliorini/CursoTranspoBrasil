@@ -13,7 +13,7 @@
 	<h:form>
 Seu nome por favor?
 <h:inputText value="#{helloWorldBean.nome}"></h:inputText>
-		<h:commandButton value="enviar" action="result"></h:commandButton>
+		<h:commandButton value="enviar" action="#{helloWorldBean.salvar}"></h:commandButton>
 	</h:form>
 </h:body>
 </html>

@@ -26,4 +26,9 @@ public class ContatoFacade {
 		return repositorio.salvar(contatoAtual);
 
 }
+
+	public boolean removerContato(Contato contatoAtual) {
+
+		return repositorio.remover(contatoAtual.getId());
+	}
 }

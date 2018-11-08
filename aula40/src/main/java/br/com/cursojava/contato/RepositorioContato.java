@@ -58,7 +58,7 @@ public class RepositorioContato {
 		int maior = lista.size();
 		lista = lista
 				.stream()
-				.filter(contato -> id!= null && id.equals(contato))
+				.filter(contato -> id!= null && !id.equals(contato.getId()))
 				.collect(Collectors.toList());
 		return maior > lista.size();
 	}

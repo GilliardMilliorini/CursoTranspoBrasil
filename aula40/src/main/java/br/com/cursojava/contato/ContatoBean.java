@@ -11,57 +11,42 @@ import javax.faces.context.FacesContext;
 @ManagedBean
 @ViewScoped
 public class ContatoBean {
-	private ContatoFacade facade = new ContatoFacade();
-	private List<Contato> contatos;
-	private Contato contatoAtual = facade.novoContato();
-	// private Integer id;
-	private String oid; // para teste
-	private boolean isNovo = true;
 
-	private String getOid() {
+	private ContatoFacade facade = new ContatoFacade();
+	private Contato contatoAtual = facade.novoContato() ;
+	private List<Contato> contatos;
+	private String oid;
+	private boolean novo = true;
+	private boolean podeEditar = true;
+	
+	public boolean isPodeEditar() {
+		return podeEditar;
+	}
+
+	public String getOid() {
 		return oid;
 	}
-
 	
-	
-//	
-//	this.oid = oid;
-//	if ("novo".equals(oid)) {
-//		contatoAtual = facade.novoContato();
-//	} else {
-//		try {
-//			Integer id = Integer.parseInt(oid);
-//			contatoAtual = facade.carregarContato(id);
-//			isNovo = false;
-//		} catch (NumberFormatException ex) {
-//			addMensagem("Id Invalido!", FacesMessage.SEVERITY_ERROR);
-//		}
-//	}
-	private void setOid() {
+	public void setOid(String oid) {
 		this.oid = oid;
-		if ("novo".equals(oid)) {
-			contatoAtual = facade.novoContato();
-			isNovo = true;
-		} else {
-			try {
+		if("novo".equals(oid)){
+			novo ();
+		}else{
+			try{
 				Integer id = Integer.parseInt(oid);
-				isNovo = false;
-				contatoAtual= facade.carregarContato(id);
-			} catch (NumberFormatException ex) {
-				FacesContext context = FacesContext.getCurrentInstance();
-				FacesMessage massage = new FacesMessage("Id Invalido");
-				massage.setSeverity(FacesMessage.SEVERITY_ERROR);
-				context.addMessage(null, massage);
+				contatoAtual = facade.carregarContato(id);
+				novo = false;
+			}catch(NumberFormatException ex){
+				FacesContext context= FacesContext.getCurrentInstance();
+				FacesMessage message = new FacesMessage("Id inválido");
+				message.setSeverity(FacesMessage.SEVERITY_ERROR);
+				context.addMessage(null, message);
 			}
-		
-
-
 		}
-		
 	}
-
+	
 	public Integer getId() {
-		return contatoAtual != null ? contatoAtual.getId() : null;
+		return  contatoAtual != null ? contatoAtual.getId() : null;
 	}
 
 	public void setId(Integer id) {
@@ -69,7 +54,7 @@ public class ContatoBean {
 			contatoAtual.setId(id);
 		}
 	}
-
+	
 	public String getNome() {
 		return contatoAtual != null ? contatoAtual.getNome() : "";
 	}
@@ -109,43 +94,69 @@ public class ContatoBean {
 			contatoAtual.setTipo(tipo);
 		}
 	}
-
-	public TipoContato[] getTipos() {
+	
+	public TipoContato[] getTipos(){
 		return TipoContato.values();
 	}
-
-	public void salvar() {
+	
+	public String listar(){
+		novo();
+		return "./lista.jsf";
+	}
+	
+	public void salvar(){
 		boolean ok = false;
-		if (contatoAtual != null) {
+		if(contatoAtual != null){
 			ok = facade.salvar(contatoAtual);
 		}
-		if (ok) {
+		if(ok){
 			addMensagem("Contato salvo com sucesso", FacesMessage.SEVERITY_INFO);
-		} else {
-			addMensagem("Não foi possivel salvar o contato", FacesMessage.SEVERITY_ERROR);
+			podeEditar = false;
+			novo = false;
+		}else{
+			addMensagem("Não foi possível salvar o contato", FacesMessage.SEVERITY_ERROR);
 		}
 	}
-
-	public void remover() {
+	
+	public void remover(){
+		boolean ok = false;
+		if(contatoAtual != null && !novo){
+			ok = facade.removerContato(contatoAtual);
+			if(ok){
+				addMensagem("Contato removido com sucesso", FacesMessage.SEVERITY_INFO);
+				novo();
+			}else{
+				addMensagem("Não foi possivel remover o contato", FacesMessage.SEVERITY_ERROR);
+			}
+		}
 
 	}
-
-	public void editar() {
-
+	
+	
+	public void editar(){
+		this.podeEditar = true;
 	}
-
-	public List<Contato> getContatos() {
-		if (contatos == null || contatos.isEmpty()) {
+	public void novo(){
+		this.contatoAtual = facade.novoContato();
+		editar();
+		
+	}
+	
+	public List<Contato> getContatos(){
+		if(contatos == null || contatos.isEmpty()){
 			contatos = facade.carregarContatos();
 		}
 		return contatos;
 	}
-
-	private void addMensagem(String mensagem, Severity severidade) {
-		FacesContext context = FacesContext.getCurrentInstance();
-		FacesMessage massage = new FacesMessage(mensagem);
-		massage.setSeverity(FacesMessage.SEVERITY_ERROR);
-		context.addMessage(null, massage);
+	
+	private void addMensagem(String mensagem, Severity severidade){
+		FacesContext context= FacesContext.getCurrentInstance();
+		FacesMessage message = new FacesMessage(mensagem);
+		message.setSeverity(severidade);
+		context.addMessage(null, message);
 	}
+
+	
+
 
 }

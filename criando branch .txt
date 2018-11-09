@@ -1,0 +1,31 @@
+1 - criar um branch 
+git checkout -b nome-do-branch
+
+trabalho :   git add .
+			git commit -m "descrição"
+			git push -- set-upstream origin nome-do-branch
+			
+			branch criado e dados alocados no servidor.
+			
+---------			
+ atualizando informações no novo branch
+
+		git add .
+		git commit -m
+		git push origin nome-do-branch
+		
+		
+		pull request / para enviar as altyerações do seu branch para o master
+--------	
+		
+2 -  Pull request
+na aba pull request selecionar o new pull request.
+selecionar o destino(base) do arquivo e a origem(compare)
+ sistema verifica se é habilitado fazer este envio, 
+-------------------
+ 
+ 3 -  passo 3 - Atualizar branch com as informações da master
+ git checkout master
+ git pull origin master
+ git checkout nome-do-branch
+ git merge master

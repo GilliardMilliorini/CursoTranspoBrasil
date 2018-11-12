@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<h:head>
+	<title>Trab 12/11</title>
+	<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+.main {
+	width: 1200px;
+	margin: 10px auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.header {
+	width: 100%;
+	height: 200px;
+	background-color: #eee;
+	padding: 20px;
+}
+
+.header h3 {
+	font-size: 36px;
+	color: #333;
+	margin-bottom: 40px;
+}
+
+.content {
+	width: 100%;
+	margin: 10px 0;
+	padding: 20px;
+}
+</style>
+</h:head>
+
+<h:body>
+
+	<div class="main">
+		<div class="header">
+			<h3>Imprimir nome</h3>
+		</div>
+		<div class="content">
+			<h:messages></h:messages>
+
+			<h:form>
+				<h:panelGrid columns="4" cellpadding="25">
+					<h:outputLabel for="nome" value="Nome:" style="font-weight: italic"/>
+					<h:inputText id="nome" value="#{imprimeNome.nome}" />
+					<h:commandButton value="Submit" update="imprimir" />
+					<h:outputText id="display" value="#{imprimeNome.nome}" />
+
+				</h:panelGrid>
+			</h:form>
+
+		
+
+
+		</div>
+	</div>
+</h:body>
+</html>

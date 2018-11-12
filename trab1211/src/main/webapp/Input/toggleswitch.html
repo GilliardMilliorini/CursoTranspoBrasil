@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+
+ 
+<h:body>
+
+<div class="main">
+	<div class="header">
+		<h3>Formulario</h3>
+	</div>
+	<div class="content">
+		<h:messages></h:messages>
+<h:form>
+    <p:growl id="msg" />
+ 
+    <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
+        <h:outputText value="Basic: " />
+        <p:toggleSwitch value="#{selectBoolean.value1}" />
+         
+        <h:outputText value="Ajax: " />
+        <p:toggleSwitch value="#{selectBoolean.value2}">
+            <p:ajax listener="#{selectBoolean.addMessage}" update="msg" />
+        </p:toggleSwitch>
+    </h:panelGrid>
+ 
+    <p:commandButton value="Submit" icon="pi pi-check" update="display" oncomplete="PF('dlg').show()" />
+ 
+    <p:dialog header="Values" modal="true" resizable="false" showEffect="fade" widgetVar="dlg">
+        <h:panelGrid columns="1" id="display">
+            <h:outputText value="Value 1: #{selectBoolean.value1}" />
+            <h:outputText value="Value 2: #{selectBoolean.value2}" />
+        </h:panelGrid>
+    </p:dialog>
+</h:form>
+</div>
+</div>
+</h:body>
+</html>

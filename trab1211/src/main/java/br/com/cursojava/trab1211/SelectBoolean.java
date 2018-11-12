@@ -7,27 +7,27 @@ import javax.faces.context.FacesContext;
 @ManagedBean
 public class SelectBoolean {
 
-	    private boolean value1;  
-	    private boolean value2;
+	    private boolean valor1;  
+	    private boolean valor2;
 	 
 	    public boolean isValue1() {
-	        return value1;
+	        return valor1;
 	    }
 	 
 	    public void setValue1(boolean value1) {
-	        this.value1 = value1;
+	        this.valor1 = value1;
 	    }
 	 
 	    public boolean isValue2() {
-	        return value2;
+	        return valor2;
 	    }
 	 
 	    public void setValue2(boolean value2) {
-	        this.value2 = value2;
+	        this.valor2 = value2;
 	    }
 	     
 	    public void addMessage() {
-	        String summary = value2 ? "Checked" : "Unchecked";
+	        String summary = valor2 ? "Checked" : "Unchecked";
 	        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(summary));
 	    }
 	}

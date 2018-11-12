@@ -8,15 +8,15 @@ import javax.faces.context.FacesContext;
 public class ToolbarView {
      
     public void save() {
-        addMessage("Success", "Data saved");
+        addMessage("Parabéns!!", "Arquivo salvo com sucesso!");
     }
      
     public void update() {
-        addMessage("Success", "Data updated");
+        addMessage("Parabéns!!!", "Arquivo atualizado com sucesso");
     }
      
     public void delete() {
-        addMessage("Success", "Data deleted");
+        addMessage("Parabéns!!!", "Arquivo deletado com sucesso");
     }
      
     public void addMessage(String summary, String detail) {

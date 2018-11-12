@@ -6,7 +6,6 @@
 	xmlns:f="http://xmlns.jcp.org/jsf/core"
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
-
 <h:head>
 	<title>Trab 12/11</title>
 	<style>
@@ -47,30 +46,33 @@
 </h:head>
 
 <h:body>
-	<h:form>
 
-		<div class="main">
-			<div class="header">
-				<h3>Editar e gravar texto</h3>
-			</div>
-			<div class="content">
-			<p:editor id="editor" widgetVar="editorWidget"
-					value="#{editorView.texto1}" width="600" />
+	<div class="main">
+		<div class="header">
+			<h3>Contador de click</h3>
+		</div>
+		<div class="content">
+			<h:messages></h:messages>
 
-				<h:panelGrid columns="3" style="margin-top: 10px">
-					<p:commandButton value="Gravar" update="display"  oncomplete="PF('dlg').show()" />
-
-					<p:commandButton value="Limpar" type="button"
-						onclick="PF('editorWidget').clear();" />
+			<h:form>
+				<h:panelGrid columns="2" cellpadding="5">
+					<h:outputText value="Contador de clicks: " />
+					<h:outputText id="output" value="#{counterView.number}" />
 				</h:panelGrid>
 
-				<p:dialog header="Texto digitado" widgetVar="dlg" showEffect="fade"
-					hideEffect="fade">
-					<h:outputText id="display" value="#{editorView.texto1}"
-						escape="false" />
-				</p:dialog>
-			</div>
+				<p:commandButton value="Clique aqui" action="#{counterView.increment}"
+					update="output" />
+			</h:form>
+
+
+
+
 		</div>
-	</h:form>
+	</div>
 </h:body>
 </html>
+
+
+
+
+

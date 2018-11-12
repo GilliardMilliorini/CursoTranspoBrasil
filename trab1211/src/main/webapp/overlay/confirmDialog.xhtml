@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<head>
+
+<title>Destruir o mundo!!!</title>
+</head>
+<body>
+
+
+<h:form>     
+    <p:growl id="message" showDetail="true" />
+     
+    <p:commandButton value="Vamos destruir o mundo!!" action="#{dialogView.destroyWorld}" update="message">
+        <p:confirm header="Bora?" message="Você tem certeza???"  />
+    </p:commandButton>
+     
+    <p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+        <p:commandButton value="Simm" type="button" styleClass="ui-confirmdialog-yes"  />
+        <p:commandButton value="Não ):" type="button" styleClass="ui-confirmdialog-no"  />
+    </p:confirmDialog>      
+</h:form>
+
+
+</body>
+</html>

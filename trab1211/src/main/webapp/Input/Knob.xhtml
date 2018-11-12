@@ -15,11 +15,13 @@
 </p:growl>
 </h:head>
 <h:body>
+<h:form>
 <h3 style="margin-top: 0">Aplicacao Basica</h3>
 <div class="knob-container ui-corner-all">
 	<p:knob value="#{knob.value}">
 		<p:ajax listener="#{knob.onChange}" />
 	</p:knob>
 </div>
+</h:form>
 </h:body>
 </html>

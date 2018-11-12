@@ -49,20 +49,33 @@
 
 	<div class="main">
 		<div class="header">
-			<h3>Imprimir nome</h3>
+			<h3>Foco automatico no primeiro campo</h3>
 		</div>
 		<div class="content">
 			<h:messages></h:messages>
 
-			<h:form>
-				<h:panelGrid columns="4" cellpadding="25">
-					<h:outputLabel for="nome" value="Nome:" style="font-weight: italic"/>
-					<h:inputText id="nome" value="#{imprimeNome.nome}" />
-					<h:commandButton value="Imprimir" update="imprimir" />
-					<h:outputText id="display" value="#{imprimeNome.nome}" />
-
-				</h:panelGrid>
-			</h:form>
+		<h:form>
+    <p:panel id="panel" header="Register">
+ 
+        <p:focus context="panel"/>
+ 
+        <p:messages />
+ 
+        <h:panelGrid columns="3">
+            <p:outputLabel for="username" value="Usuário" />
+            <p:inputText id="username" value="#{focusView.username}" required="true" label="Firstname">
+                <f:validateLength minimum="2" />
+            </p:inputText>
+            <p:message for="username" />
+ 
+            <p:outputLabel for="email" value="Email" />
+            <p:inputText id="email" value="#{focusView.email}" required="true" label="Surname"/>
+            <p:message for="email" />
+        </h:panelGrid>
+ 
+        <p:commandButton id="submitButton" value="Salvar" update="@parent" action="#{focusView.save}" />
+    </p:panel>
+</h:form>
 
 		
 

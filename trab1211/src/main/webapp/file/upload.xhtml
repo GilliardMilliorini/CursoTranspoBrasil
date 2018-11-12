@@ -1,12 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:f="http://xmlns.jcp.org/jsf/core"
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
-<h:head>
+	
+	<h:head>
 	<title>Trab 12/11</title>
 	<style>
 * {
@@ -45,29 +43,13 @@
 </style>
 </h:head>
 
-<h:body>
-
-	<div class="main">
-		<div class="header">
-			<h3>Imprimir nome</h3>
-		</div>
-		<div class="content">
-			<h:messages></h:messages>
-
-			<h:form>
-				<h:panelGrid columns="4" cellpadding="25">
-					<h:outputLabel for="nome" value="Nome:" style="font-weight: italic"/>
-					<h:inputText id="nome" value="#{imprimeNome.nome}" />
-					<h:commandButton value="Imprimir" update="imprimir" />
-					<h:outputText id="display" value="#{imprimeNome.nome}" />
-
-				</h:panelGrid>
-			</h:form>
-
-		
-
-
-		</div>
-	</div>
-</h:body>
+<h:form enctype="multipart/form-data">
+    <p:growl id="messages" showDetail="true" />
+     
+    <p:fileUpload value="#{fileUploadView.file}" mode="simple" skinSimple="true"/>
+     
+ 
+     
+    <p:commandButton value="Enviar" ajax="false" action="#{fileUploadView.upload}" disabled="true" />
+</h:form>
 </html>

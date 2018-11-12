@@ -20,6 +20,6 @@ public class Knob implements Serializable {
     }  
    
     public void onChange(){  
-        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "You have selected: " + value, null));  
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Você selecionou: " + value+"%", null));  
     }  
 }

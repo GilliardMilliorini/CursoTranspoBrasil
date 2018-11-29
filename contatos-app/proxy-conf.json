@@ -1,0 +1,8 @@
+{
+"/api":{
+    "target": "http://localhost:8080/ExemploApi",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "info"
+    }
+}

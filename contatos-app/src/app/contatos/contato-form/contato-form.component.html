@@ -1,0 +1,38 @@
+<div>
+
+  <div>
+    <form [formGroup]="contatoForm" (ngSubbmit)="onSubmit()">
+      <div class="field">
+        <label class="label">id</label>
+        <div class="control">
+          <input class="input" type="text" formControlName="id" readonly>
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">nome</label>
+        <div class="control">
+          <input class="input" type="text" formControlName="nome" required>
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">email</label>
+        <div class="control">
+          <input class="input" type="email" formControlName="email" required>
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">telefone</label>
+        <div class="control">
+          <input class="input" type="text" formControlName="telefone">
+        </div>
+      </div>
+      <div class="field">
+        <div class="control">
+          <button type="submit" class="button is-success is-fullwidth">Salvar</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+
+</div>

@@ -1,0 +1,10 @@
+baixar nodejs
+verificar versao node    node-v
+
+npm install -g @angular/cli
+cd contatos-app
+ng serve --proxy-config proxy-conf.json
+
+
+
+Comando para utilizar ao iniciar o Angular 

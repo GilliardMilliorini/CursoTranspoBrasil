@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
+<!-- 2018-12-07T17:49:37 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b8cf6b1b-2610-4599-a7be-6904a960166a">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="ireport.callouts" value="callouts.1.fg=0,0,0\ncallouts.1.text=suporte 07/12/18 17\:20\ncallouts.1.bounds=240,550,5,5\ncallouts.1.bg=255,255,0\n"/>
+	<parameter name="marca_id" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[select 
+produtos.id,
+produtos.nome,
+produtos.preco,
+marcas.nome as marca
+from produtos,
+marcas
+where marcas.id= produtos.marca_id
+and marcas.id =  $P{marca_id} ]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="nome" class="java.lang.String"/>
+	<field name="preco" class="java.math.BigDecimal"/>
+	<field name="marca" class="java.lang.String"/>
+	<variable name="Contador" class="java.lang.Float" calculation="Sum">
+		<variableExpression><![CDATA[$F{preco}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="-20" y="-4" width="595" height="35" uuid="5dd8d92b-ee85-4c76-aef5-cf02b2c9d30e"/>
+				<textElement textAlignment="Center">
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Produtos]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="1" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="80" height="30" uuid="57a43552-aa29-402f-927b-579dce5828fd"/>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="0" width="100" height="30" uuid="99a89ece-7a65-4118-8419-9f3b0a729f9e"/>
+				<text><![CDATA[nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="0" width="100" height="30" uuid="e1a1805f-c428-490f-b17d-f41bb502560b"/>
+				<text><![CDATA[marca]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="0" width="100" height="30" uuid="f69daed8-1c83-4c28-b915-a32306b10954"/>
+				<text><![CDATA[preco]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-20" y="49" width="595" height="1" uuid="b0cd8354-5448-4d17-9b23-a396110fff13">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="44" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="10" width="80" height="30" uuid="e6699f70-9b2e-4d73-bed9-f64583afb045"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="10" width="100" height="30" uuid="305152a4-67f5-4b9a-aa3d-e282e854d342"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="5" width="100" height="30" uuid="90a19662-85df-4606-97ad-7cac09809d8f"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{preco}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="8" width="100" height="30" uuid="c953e1a7-85a4-486c-9d1a-1bc7aef73b25"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{marca}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="53" splitType="Stretch">
+			<staticText>
+				<reportElement x="230" y="11" width="160" height="30" uuid="7aa9604f-47c2-478b-b3c2-c026afadefb2"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Valor Total R$: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="420" y="11" width="100" height="30" uuid="51a4cda9-3f85-4b96-8e02-710f9b703137"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{Contador}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="-20" y="0" width="595" height="1" uuid="afa4d155-4277-4326-8f4e-8061657e1685"/>
+			</line>
+		</band>
+	</summary>
+</jasperReport>
